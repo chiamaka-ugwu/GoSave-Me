@@ -1,0 +1,33 @@
+.card-container{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+.btns{
+    width: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.active-btn, .btn:focus{
+    background-color: #5FC738;
+    color: #fff;
+}
+
+
+@media screen and (max-width:1000px) {
+    .btns{
+        width: 50%;
+    }
+    
+}

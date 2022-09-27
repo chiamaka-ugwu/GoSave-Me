@@ -1,0 +1,195 @@
+/* HOSPITAL DATABASE DESKTOP */
+.admin .left{
+    width: 12%;
+    height: fit-content;
+}
+.dashboard-link{
+    cursor: pointer;
+}
+.link2{
+    font-size: 14px;
+    font-weight: normal;
+}
+.link2:hover{
+    font-weight: 600;
+}
+.admin .right{
+    width: 85%;
+    margin-bottom: 0;
+}
+.db-h3{
+    margin: 2rem 0 0 4rem;
+    color: #222;
+}
+.table-container{
+    width: 90%;
+    background: linear-gradient(113.22deg, rgba(255, 255, 255, 0.4) 1.68%, rgba(255, 255, 255, 0) 56.53%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem 0;
+    margin: 1rem auto 2rem auto;
+}
+table{
+    width: 95%;
+    margin: auto;
+    border: 2px solid #A038C7;
+    border-collapse: collapse;
+}
+th,td {
+    padding: 20px;
+    height: 20px;
+    border: 2px solid #A038C7;
+}
+
+
+/* OVERVIEW DESKTOP */
+.campaign-cont{
+    margin-top: 2rem;
+}
+.campaign-cont h4{
+    margin: 0 0 2rem 2rem;
+    font-size: 1.2rem;
+}
+.campaign{
+    display: flex;
+}
+.summary-box{
+    width: 15%;
+    margin-left: 2rem;
+    padding: 2rem;
+    background: linear-gradient(113.22deg, rgba(255, 255, 255, 0.4) 1.68%, rgba(255, 255, 255, 0) 56.53%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    text-align: center;
+}
+.summary-box h2{
+    margin-top: 3rem;
+}
+.summary-box:hover{
+    background-color: #DFF4D7;
+}
+
+
+
+/* FUND REQUESTS DESKTOP */
+.table-cont{
+    width: 70%;
+    margin-left: 4rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.table-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F5EBF9;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+}
+.box-btns{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.accept-btn{
+    padding: 10px 40px;
+}
+.decline{
+    color: #A038C7;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1000px) {
+    /* HOSPITAL DATABASE MOBILE */
+    .admin{
+        flex-direction: column;
+    }
+    .admin .left{
+        width: 100%;
+        height: fit-content;
+    }
+    .admin-links{
+        margin-inline: 0;
+        margin-left: 2rem;
+        padding-bottom: 1rem;
+    }
+    .admin-link{
+        margin-bottom: 1rem;
+    }
+    .admin .right{
+        width: 100%;
+    }
+    .table-container{
+        width: fit-content;
+        padding: 2rem;
+    }
+    table{
+        width: 50%;
+        margin: auto;
+        border: 2px solid #A038C7;
+        border-collapse: collapse;
+    }
+    th,td {
+        padding: 20px;
+        height: 20px;
+        border: 2px solid #A038C7;
+    }
+
+
+    /* OVERVIEW MOBILE */
+    .campaign-cont{
+        margin-top: 2rem;
+    }
+    
+    .campaign{
+        flex-flow: row wrap;
+    }
+    .campaign-cont h4{
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+    .summary-box{
+        width: 40%;
+        margin-left: 0;
+        margin: 1rem auto;
+    }
+    .summary-box h2{
+        margin-top: 1rem;
+    }
+    
+
+    /* FUND REQUESTS MOBILE */
+    .table-cont{
+        width: 90%;
+        margin-left: 0;
+        margin: 2rem auto;
+        padding: 2rem 0;
+    }
+    .table-box{
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1.5rem;
+    }
+    .box-btns{
+        width: 85%;
+        justify-content: space-between;
+    }
+
+
+
+
+
+
+
+}
+
+    

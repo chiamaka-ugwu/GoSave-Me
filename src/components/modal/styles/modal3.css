@@ -1,0 +1,42 @@
+ .modal-content3{
+    width: 85%;
+    margin: auto;
+}
+.modal-box3{
+    padding: 3rem 0;
+}
+.verification{
+    font-size: 14px;
+    text-align: center;
+}
+.verification-code{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.code{
+    width: 12px;
+    padding: 12px;
+    border: 2px solid #A038C7;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #5FC738;
+}
+.form-btns2{
+    width: 90%;
+    margin: 4rem auto 1rem auto
+}
+
+
+@media screen and (max-width:1000px){
+    .verification-code{
+        width: 100%;
+    }    
+    .form-btns2{
+        width: 100%;
+    }
+    
+}

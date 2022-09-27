@@ -1,0 +1,111 @@
+.dashboard{
+    width: 100%;
+    display: flex;
+}
+.dashboard .left{
+    width: 20%;
+    background-color: #5FC738;
+}
+.dashboard-links{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.dashboard-link{
+    text-decoration: none;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    color: #fff;
+}
+.dashboard-links a:hover{
+    color: #fff;
+}
+.profile-link{
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+.dashboard .right{
+    width: 65%;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+.dashboard .right .h3{
+    color: #5FC738;
+    padding-top: 2rem;
+}
+.my-patients{
+    margin-top: 2rem;
+    display: flex;
+}
+.my-patients .box{
+    width: 50%;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.card2{
+    width: 90%;
+    margin: auto;
+}
+.box-group{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard-btn{
+    padding: 10px 20px;
+}
+
+
+@media screen and  (max-width: 1000px) {
+    .dashboard .left1{
+        display: none;
+    }
+    .dashboard .right{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .dashboard .right h3{
+        margin-left: 2rem;
+    }
+    .my-patients{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    .my-patients .box{
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .box-group{
+        margin-bottom: 3rem;
+        gap: 1rem;
+        width: fit-content;
+    }
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

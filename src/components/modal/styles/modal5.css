@@ -1,0 +1,55 @@
+.ver2{
+    margin-top: 1rem;
+}
+.ver-input{
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #A038C7;
+    outline: none;
+    border: 2px solid #A038C7;
+}
+.radio-group{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+}
+.radio-group .checkbox{
+    margin-right: 2rem;
+}
+.modal5-form{
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+}
+.form-btns5{
+    margin-top: 2rem;
+}
+.modal8{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-btns8{
+    width: 100%;
+}
+
+
+@media screen and (max-width:1000px) {
+    .modal5-form{
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .radio-group .checkbox{
+        margin-right: 0;
+    }
+    .form-btns5{
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+    }
+    .form-btns6{
+        margin-bottom: -1rem;
+    }
+    
+}

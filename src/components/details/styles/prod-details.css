@@ -1,0 +1,50 @@
+.prod-details{
+    display: flex;
+}
+.prod-left{
+    width: 40%;
+}
+.prod-right{
+    width: 60%;
+    margin-bottom: 3rem;
+}
+.prod-right h4{
+    margin-left: 6.5rem;
+    margin-top: 2rem;
+}
+article{
+    display: flex;
+    justify-content: center;
+}
+.prod-card{
+    width: 35%;
+}
+
+
+@media screen and (max-width:1000px) {
+    .prod-details{
+        flex-direction: column;
+    }
+    .prod-left{
+        width: 100%;
+    }
+    .prod-right{
+        width: 100%;
+    }
+    .bar3{
+        margin: auto;
+    }
+    .prod-right h4{
+        margin-left: 0;
+        text-align: center;
+    }
+    article{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .prod-card{
+        width: 90%;
+    }
+    
+    
+}

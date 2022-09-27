@@ -1,0 +1,20 @@
+.signup3 .left{
+    height: 100vh;
+}
+.signup3 .right img{
+    height: 84.5vh;
+}
+.signup-btn-cont3{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.continue-btn2{
+    padding: 12px 60px;
+}
+.inst2{
+    width: 70%;
+    margin: auto;
+}

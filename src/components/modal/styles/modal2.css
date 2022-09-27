@@ -1,0 +1,52 @@
+.modal-box2{
+    padding-bottom: 1rem;
+}
+.modal-box2 h3{
+    margin-bottom: 1rem;
+}
+.modal-content{
+    width: 70%;
+    margin: auto;
+}
+.modal-box2 h4, .modal-box2 .forgot-p{
+    text-align: left;
+}
+.forgot-h4{
+    margin-bottom: 0.5rem;
+}
+.forgot-p{
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+.modal-box2 .email-phone{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid #5FC738;
+    outline: none;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+.form-btns{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.form-btns a{
+    color: #A038C7;
+    font-weight: 600;
+    cursor: pointer;
+}
+.continue-btn{
+    padding: 12px 60px;
+}
+
+
+@media screen and (max-width:1000px) {
+    .modal-content{
+        width: 85%;
+    }
+    
+    
+}

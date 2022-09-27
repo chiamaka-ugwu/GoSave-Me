@@ -1,0 +1,108 @@
+.add-patient{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 3rem 0 0 0;
+}
+.add-patient .left{
+    width: 55%;
+}
+.add-patient .left h3{
+    color: #5FC738;
+}
+.add-patient .left p{
+    margin-top: 1rem;
+}
+.add-patient-form .full-width, textarea{
+    width: 100%;
+    outline: none;
+    padding: 18px;
+    border-radius: 10px;
+    border: 2px solid #5FC738;
+    margin: 0.8rem 0;
+    box-sizing: border-box;
+}
+.add-patient-form select{
+    padding: 17px;
+}
+.select-location2{
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 0.8rem;
+}
+.input-group{
+    width: 100%;
+    display: flex;
+}
+.amount2{
+    padding: 18px;
+    height: fit-content;
+}
+.deadline{
+    width: 50%;
+    border-radius: 10px;
+}
+.info{
+    height: fit-content;
+    margin: 2rem 0 0 1rem;
+}
+.add-patient .right{
+    width: 32%;
+    position: fixed;
+    left: 65%;
+}
+.add-patient .right h3{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.add-patient .right p{
+    font-size: 13px;
+}
+.add-patient .right input{
+    visibility: hidden;
+}
+.add-patient .right .group2{
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+.add-patient .right .group2 label{
+    margin: 0 1.5rem 1.5rem 0;
+    width: 120px;
+    height: 120px;
+    background: #DFF4D7;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+.form-submit2{
+    width: 50%;
+}
+
+
+@media screen and (max-width:1000px){
+    .add-patient{
+        width: 90%;
+        flex-direction: column;
+    }
+    .add-patient .left{
+        width: 100%;
+    }
+    .add-patient-form select{
+        padding-left: 5px;
+    }
+    .select-location2{
+        width: 60%;
+    }
+    .add-patient .right{
+        width: 100%;
+        position: relative;
+        left: 0;
+        margin: 1rem 0 5rem 0;
+    }
+    
+    
+}

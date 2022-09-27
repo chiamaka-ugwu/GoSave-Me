@@ -1,0 +1,86 @@
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-box{
+    width: 35%;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem 0 0 0;
+}
+.modal-box1{
+    padding-bottom: 2rem;
+}
+.modal h3{
+    color: #5FC738;
+}
+.contribution-form{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.contribution-form input, select{
+    padding: 15px;
+    border: 2px solid #5FC738;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+.same-width{
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.select-location{
+    width: 70%;
+    border-radius: 10px;
+}
+.money{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.money select{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.money input{
+    width: 40%;
+    border: 2px solid #5FC738;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+}
+.anonymous{
+    display: flex;
+}
+.anonymous p{
+    font-size: 12px;
+    margin-left: 0.5rem;
+}
+.form-submit1{
+    width: 100%;
+}
+
+
+@media screen and (max-width:1000px){
+    .modal-box{
+        width: 90%;
+    }
+    .contribution-form{
+        width: 80%;
+    }
+    
+}

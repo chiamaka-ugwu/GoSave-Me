@@ -1,0 +1,115 @@
+.card-details{
+    width: 90%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(30px);
+    padding: 2rem 0;
+    margin: 3rem 0 3rem 3rem;
+}
+.details-content{
+    width: 90%;
+    margin: auto;
+}
+.more{
+    margin: 1rem 0;
+    text-align: right;
+}
+.view{
+    text-decoration: none;
+    color: #A038C7;
+}
+.view:hover{
+    color: #a138c7b5;
+}
+.target-container2{
+    width: 100%;
+    background-color: #5FC738;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 0px;
+}
+.content3{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.content3 p, .content4 p{
+    line-height: 1.5;
+}
+.description{
+    margin: 1rem 0;
+}
+.content4{
+    width: 95%;
+    margin: auto;
+}
+.hospitals{
+    margin-top: 0.5rem;
+    justify-content: unset;
+}
+.location{
+    margin-left: 5.75rem;
+}
+.email-address, .address{
+    margin-top: 0.5rem;
+}
+.add{
+    margin-bottom: 0.5rem;
+}
+.content5{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.content5 a{
+    text-decoration: none;
+    color: #222;
+}
+.card-footer{
+    margin-top: 1rem;
+}
+.contributors, .share{
+    display: flex;
+}
+.icon{
+    margin-right: 0.5rem;
+}
+.small2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.bold2{
+    margin-bottom: 0.5rem;
+}
+.days-left{
+    margin-top: 1rem;
+}
+
+
+@media screen and (max-width:1000px) {
+    .card-details{
+        width: 90%;
+        margin: 3rem auto;
+        padding: 1rem 0;
+    }
+    .details-content{
+        width: 93%;
+    }
+    .card-footer-btn{
+        padding: 10px;
+    }
+    .content5{
+        width: 100%;
+    }
+    
+    
+    
+    
+    
+}
+
+
