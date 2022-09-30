@@ -39,6 +39,10 @@
 
 
 @media screen and (max-width:1000px) {
+    .donate{
+        background-image: url(../../../assets/images/donate2.png);
+    }
+    
     .donate-content{
         padding-top: 2rem;
     }
