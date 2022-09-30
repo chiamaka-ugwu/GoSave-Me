@@ -83,6 +83,9 @@
 
 
 @media screen and (max-width:1000px){
+    .signup .left{
+        margin: 0;
+    }    
     .notice-cont{
         align-items: flex-start;
     }
@@ -92,6 +95,7 @@
     .line{
         width: 31%;
     }
-    
-    
+    .signup-cont{
+        padding-bottom: 2rem;
+    }
 }
