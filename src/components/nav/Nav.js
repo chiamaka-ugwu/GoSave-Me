@@ -76,7 +76,7 @@ const Nav = ({ className, donate, works, account, id }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="" className={`nav-item ${works}`} onClick={toggle}>
+                            <Link to="/admin-dashboard" className={`nav-item ${works}`} onClick={toggle}>
                                 How It Works
                             </Link>
                         </li>
