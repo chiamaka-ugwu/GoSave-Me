@@ -8,8 +8,7 @@ import arrow from "../../assets/images/arrow.png";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faClose } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faClose, faUser, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 
 const Nav = ({ className, donate, works, account, id }) => {
@@ -51,9 +50,9 @@ const Nav = ({ className, donate, works, account, id }) => {
                             aria-haspopup="true"
                             aria-expanded={open ? "true" : undefined}
                             onClick={handleClick} >
-                            <img src={person} alt="person" className='person' />
+                            <FontAwesomeIcon icon={faUser} className='person' />
                             Account
-                            <img src={arrow} alt="arrow" className='arrow' />
+                            <FontAwesomeIcon icon={faAngleDown} className='arrow' />
                         </li>
                             <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose} MenuListProps={{"aria-labelledby": "basic-button",}}>
                                 <MenuItem onClick={handleClose}>
@@ -88,9 +87,9 @@ const Nav = ({ className, donate, works, account, id }) => {
                             aria-haspopup="true"
                             aria-expanded={open ? "true" : undefined}
                             onClick={handleClick} >
-                            <img src={person} alt="person" className='person' />
+                            <FontAwesomeIcon icon={faUser} className='person' />
                             Account
-                            <img src={arrow} alt="arrow" className='arrow' />
+                            <FontAwesomeIcon icon={faAngleDown} className='arrow'/>
                         </li>
                             <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose} MenuListProps={{"aria-labelledby": "basic-button",}}>
                                 <MenuItem onClick={handleClose}>
