@@ -16,7 +16,7 @@ const Modal2 = ({setModal}) => {
                         <p className="forgot-p">Your organisation email address or phone number</p>
                         <h4 className='forgot-h4'>Or</h4>
                         <p className="forgot-p">Your person of contact email address or phone number</p>
-                        <form>
+                        <form onSubmit={(e) => e.preventDefault()}>
                             <input className='email-phone' type="text" placeholder='Email address / Phone number' />
                             <div className="form-btns">
                                 <a onClick={() => setModal(false)}>Cancel</a>

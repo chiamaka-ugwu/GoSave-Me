@@ -2,12 +2,15 @@ import React from 'react';
 import './styles/card.css';
 import { Link } from 'react-router-dom';
 import patient from '../../assets/images/patient.png';
-import circle from '../../assets/images/i-circle.png'
+import circle from '../../assets/images/i-circle.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Card = ({className}) => {
+    AOS.init();
     return (
         <>
-            <div className={`card ${className}`}>
+            <div className={`card ${className}`} data-aos="fade-up" data-aos-duration="3000">
                 <div className="card-content">
                     <div className="img-container">
                         <Link to='/product-details'>

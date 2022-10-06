@@ -94,10 +94,10 @@ const Nav = ({ className, donate, works, account, id }) => {
                         </li>
                             <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose} MenuListProps={{"aria-labelledby": "basic-button",}}>
                                 <MenuItem onClick={handleClose}>
-                                    <Link to='/login'>Log in</Link>
+                                    <Link className="menuitem" to='/login'>Log in</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
-                                    <Link to='/signup'>Sign up</Link>
+                                    <Link className="menuitem" to='/signup'>Sign up</Link>
                                 </MenuItem>
                             </Menu>
                         <li>
