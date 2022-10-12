@@ -6,7 +6,7 @@ const LoginPage = () => {
     window.scroll(0, 0)
     return (
         <>
-            <Nav className='nav2' login='active-nav' />
+            <Nav className='nav2' account='active-nav' />
             <Login />
         </>
     )

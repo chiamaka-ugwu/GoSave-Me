@@ -14,12 +14,20 @@
 .card-content p{
     margin-bottom: 0.5rem;
 }
-.img-container img{
+.img-container{
+    /* background-color: red; */
+    /* text-align: center; */
+}
+.img-container .img{
     border-radius: 5px;
     width: 100%;
 }
-.target-container, .patient-info, .hospital{
+.target-container, .patient-info{
     margin-top: 1rem;
+    cursor: pointer;
+}
+.hospital, .days-left{
+    margin-top: 0.5rem;
 }
 .content{
     width: 95%;

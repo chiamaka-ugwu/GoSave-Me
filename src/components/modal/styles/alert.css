@@ -1,0 +1,9 @@
+.alert-box{
+    width: fit-content;
+    padding: 1rem 5rem;
+}
+.alert-icon{
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+    color: #5FC738;
+}

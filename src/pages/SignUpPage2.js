@@ -7,7 +7,7 @@ const SignUpPage2 = () => {
     window.scroll(0, 0)
     return (
         <>
-            <Nav className='nav2' />
+            <Nav className='nav2' account='active-nav' />
             <Signup2 />
 
         </>

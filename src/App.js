@@ -9,6 +9,8 @@ import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
+import HowItWorksPage from "./pages/HowItWorksPage";
+import ContactUsPage from "./pages/ContactUsPage";
 
 function App() {
     return (
@@ -17,14 +19,15 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/product" element={<ProductPage />} />
-                    <Route path="/product-details" element={<DetailsPage />} />
+                    <Route path="/product-details/:userID" element={<DetailsPage />} />
                     <Route path="/donate" element={<DonatePage />} />
                     <Route path="/add-patient" element={<AddPatientPage />} />
                     <Route path="/dashboard" element={<DashboardPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignUpPage />} />
                     <Route path="/admin-dashboard" element={<AdminDashboardPage />} />
-
+                    <Route path="/how-it-works" element={<HowItWorksPage />} />
+                    <Route path="/contact-us" element={<ContactUsPage />} />
                 </Routes>
             </Router>
         </>

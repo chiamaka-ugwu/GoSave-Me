@@ -1,4 +1,4 @@
-.button{
+.button, .paystack-btn{
     padding: 14px 40px;
     background-color: #A038C7;
     border: none;
@@ -9,6 +9,9 @@
     border-radius: 15px;
     cursor: pointer;
 }
-.button:hover{
+.button:hover, .paystack-btn:hover{
     background-color: #a138c7b5;
+}
+.paystack-btn{
+    width: 100%;
 }

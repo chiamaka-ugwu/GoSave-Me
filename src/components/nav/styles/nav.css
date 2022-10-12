@@ -48,7 +48,7 @@
 .account{
     cursor: pointer;
 }
-.menuitem{
+.droplink{
     color: #A038C7 !important;
     font-weight: 600 !important;
     cursor: pointer !important;

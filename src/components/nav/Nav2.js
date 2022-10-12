@@ -5,7 +5,6 @@ import './styles/nav2.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faClose } from '@fortawesome/free-solid-svg-icons'
-import AdminDashboard from "../dashboard/AdminDashboard";
 
 
 const Nav2 = () => {

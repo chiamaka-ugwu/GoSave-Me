@@ -47,10 +47,6 @@
 }
 .hospitals{
     margin-top: 0.5rem;
-    justify-content: unset;
-}
-.location{
-    margin-left: 5.75rem;
 }
 .email-address, .address{
     margin-top: 0.5rem;

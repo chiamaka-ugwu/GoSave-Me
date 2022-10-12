@@ -3,8 +3,10 @@
     display: flex;
 }
 .dashboard .left{
-    width: 20%;
+    width: 15%;
     background-color: #5FC738;
+    position: fixed;
+    height: 100vh;
 }
 .dashboard-links{
     width: fit-content;
@@ -19,18 +21,17 @@
     font-weight: 600;
     color: #fff;
 }
-.dashboard-links a:hover{
-    color: #fff;
-}
-.profile-link{
+.active-link{
     color: #222;
-    text-decoration: none;
-    font-weight: 600;
+}
+.dashboard-link:hover{
+    text-decoration: underline;
 }
 .dashboard .right{
-    width: 65%;
+    width: 70%;
     margin: auto;
     margin-bottom: 10rem;
+    margin-left: 22%;
 }
 .dashboard .right .h3{
     color: #5FC738;

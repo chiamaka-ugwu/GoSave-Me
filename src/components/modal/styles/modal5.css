@@ -32,6 +32,8 @@
 }
 .form-btns8{
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 

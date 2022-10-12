@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/add-patient.css";
 import info from "../../assets/images/i-circle.png";
 import add from "../../assets/images/add.png";
 import TestImg from "../../assets/images/patient2.png";
 import Button from "../button/Button";
 import supabase from "../../config/supabase";
+import { Link, useNavigate } from "react-router-dom";
 
 const AddPatient = () => {
-  const [patientData, setPatientData] = useState({});
+  const [patientData, setPatientData] = useState({
+    currency: "₦"
+  });
   const supabse_conn = supabase();
+  const navigate = useNavigate();
+  const user_data = supabse_conn.auth.user(); // get logged in hospital
+  const [User, setuser] = useState(null);
+
   const addPatient = () => {
     // console.log(imgHandler);
     const newPatData = {
       ...patientData,
       images: imgHandler.images,
     };
-
     const insert = () => {
       supabse_conn
         .from("patients")
@@ -24,7 +30,10 @@ const AddPatient = () => {
           email: patientData.patientEmail,
           nextOfKin: patientData.nextOfKin,
           nextOfKinPhone: patientData.nextOfKinPhone,
-          patientData: newPatData,
+          patientData: {
+            ...newPatData,
+            hospital:User
+          },
         })
         .then(() => {
           setimgPrevState({
@@ -62,7 +71,6 @@ const AddPatient = () => {
         } else {
           alert("error occured");
         }
-
         setLoader(false);
       })
       .catch((error) => {
@@ -134,6 +142,24 @@ const AddPatient = () => {
       return <Button btnName="Submit" btnClass="form-submit2" type="submit" />;
     }
   };
+
+  const getUser = () => {
+    supabse_conn
+      .from("hospital")
+      .select("*")
+      .eq("email", user_data.email)
+      .then((res) => {
+        setuser(res.data[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    if (user_data == null) return navigate("/login");
+    getUser();
+  });
 
   return (
     <>
@@ -389,8 +415,8 @@ const AddPatient = () => {
         <div className="right">
           <h3>Add Images</h3>
           <p className="small">
-            Add at least 2 photos for this category <br /> First picture - is
-            the title picture.{" "}
+            Add at least 4 photos for this category <br /> First picture - is
+            the title picture.
           </p>
           <div className="patient-images">
             <div className="group2">
