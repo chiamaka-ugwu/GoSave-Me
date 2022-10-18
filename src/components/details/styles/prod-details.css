@@ -16,7 +16,7 @@ article{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    background-color: red;
+    /* background-color: red; */
 }
 .prod-card{
     width: 35%;
