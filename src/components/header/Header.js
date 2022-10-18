@@ -47,20 +47,19 @@ const Header = () => {
           </h2>
         </div>
         <div className="btn-container">
-          <Button
-            type='submit'
-            onClick = {(e) => {
-              e.preventDefault();
-              setModal(true);
-            }}
-            btnName="Save a life"
-            btnClass="save-btn"
-          />
+          <a href="#save">
+            <Button
+              btnName="Save a life"
+              btnClass="save-btn"
+            />
+          </a>
         </div>
       </header>
       <SearchBar />
-      <h3 className="save">Save a life today</h3>
-      <div className="card-section">{patients()}</div>
+      <h3 className="save" id='save'>Save a life today</h3>
+      <section className="section">
+        <div className="card-section">{patients()}</div>
+      </section>
       <div className="view-more">
         <Link to="/product">View More</Link>
       </div>

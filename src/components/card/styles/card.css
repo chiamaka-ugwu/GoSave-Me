@@ -14,10 +14,9 @@
 .card-content p{
     margin-bottom: 0.5rem;
 }
-.img-container{
-    /* background-color: red; */
-    /* text-align: center; */
-}
+/* .img-container{
+    text-align: center;
+} */
 .img-container .img{
     border-radius: 5px;
     width: 100%;
@@ -40,11 +39,12 @@
     margin: auto;
 }
 .target-container{
-    width: 90%;
+    width: 100%;
     background-color: #5FC738;
     border-radius: 5px;
     color: #fff;
     padding: 15px;
+    box-sizing: border-box;
 }
 .bold{
     font-weight: 600;

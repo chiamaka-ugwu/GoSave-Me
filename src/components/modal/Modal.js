@@ -6,7 +6,7 @@ import { PaystackButton } from "react-paystack";
 import Alert from "./Alert";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
-const Modal = ({ setModal, setalert, patient, donate, donate_type }) => {
+const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
   const [checked, setChecked] = useState(true);
 
   const handleChange = (event) => {
@@ -72,7 +72,7 @@ const Modal = ({ setModal, setalert, patient, donate, donate_type }) => {
           updateHospitalWallet();
           console.log(res);
           setModal(false);
-          setalert(true);
+          setAlert(true);
         })
         .catch((error) => {
           alert(error);
@@ -90,7 +90,7 @@ const Modal = ({ setModal, setalert, patient, donate, donate_type }) => {
         })
         .then((res) => { 
           setModal(false);
-          // setalert(true);
+          // setAlert(true);
         })
         .catch((error) => {
           alert(error);
@@ -131,7 +131,7 @@ const Modal = ({ setModal, setalert, patient, donate, donate_type }) => {
   return (
     <>
       {alert && (
-        <Alert msg="Success" setalert={setalert} icon={faCircleCheck} />
+        <Alert msg="Success" setAlert={setAlert} icon={faCircleCheck} />
       )}
       {console.log(patient)}
       <div className="modal" onClick={() => setModal(false)}>

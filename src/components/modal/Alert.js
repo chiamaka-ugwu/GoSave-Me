@@ -3,13 +3,18 @@ import "./styles/alert.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const Alert = ({msg, setalert, icon}) => {
+const Alert = ({msg, setAlert, icon, msgColor, iconColor, setError }) => {
     return (
         <>
-            <div className="modal" onClick={() => setalert(false)} >
+            <div className="alert" 
+                onClick={() => {
+                    setError(false); 
+                    setAlert(false);
+                }} 
+            >
                 <div className="modal-box modal-box1 alert-box" onClick={(e) => e.stopPropagation()}>
-                    <FontAwesomeIcon icon={icon} className='alert-icon' />
-                    <h3>{msg}</h3>
+                    <FontAwesomeIcon icon={icon} className={` alert-icon ${iconColor}`} />
+                    <h3 className={`alert-h3 ${msgColor}`}>{msg}</h3>
                 </div>
             </div>    
 

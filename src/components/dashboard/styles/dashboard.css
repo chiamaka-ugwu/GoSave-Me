@@ -40,15 +40,17 @@
 .my-patients{
     margin-top: 2rem;
     display: flex;
+    flex-flow: row wrap;
 }
 .my-patients .box{
-    width: 50%;
-    margin-right: 3rem;
+    width: 40%;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
 }
 .card2{
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 .box-group{
@@ -69,12 +71,14 @@
     }
     .dashboard .right{
         width: 100%;
+        margin-left: 0;
         margin-bottom: 2rem;
     }
     .dashboard .right h3{
         margin-left: 2rem;
     }
     .my-patients{
+        width: 100%;
         margin-top: 1rem;
         flex-direction: column;
     }
@@ -89,7 +93,10 @@
         gap: 1rem;
         width: fit-content;
     }
-    
+    .card2{
+        width: 95%;
+        margin: auto;
+    }   
     
     
     

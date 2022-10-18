@@ -6,6 +6,7 @@ import Modal from "../modal/Modal";
 const Donate = () => {
   const [modal, setModal] = useState(false);
   const [donate_type, setdonate_type] = useState("");
+  const [title, setTitle] = useState(""); 
   return (
     <>
       <div className="donate">

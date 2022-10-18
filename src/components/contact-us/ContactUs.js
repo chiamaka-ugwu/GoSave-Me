@@ -5,11 +5,15 @@ import Button from '../button/Button';
 import whatsapp from '../../assets/images/whatsapp.png';
 import phone from '../../assets/images/phone.png';
 import supabase from "../../config/supabase";
-
+import Alert from '../../components/modal/Alert';
+import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 const ContactUs = () => {
+    const [alert, setAlert] = useState(false);
+    const [error, setError] = useState(false);
     const [contactData, setContactData] = useState({});
     const supabse_conn = supabase();
+
     const addContact = () => {
         supabse_conn
           .from("contactUs")
@@ -21,16 +25,28 @@ const ContactUs = () => {
             metadata: { ...contactData},
           })
           .then((res) => {
-            console.log(res);
-            // setModal(false);
-            // setalert(true)
+            if(res) {
+                console.log(res);
+                setAlert(true)
+              }
           })
           .catch((error) => {
-            alert(error);
+            setError(true);
+            console.log(error)
           });
       };
     return (
         <>
+            {alert && 
+                <Alert 
+                    msgColor='green'
+                    iconColor='green'
+                    msg='Message sent! We will get back to you.' 
+                    setAlert={setAlert} 
+                    setError={setError}
+                    icon={faCircleCheck} 
+                />
+            }
             <div className="contact-us">
                 <div className="left">
                     <div className="contact-img">
@@ -111,6 +127,15 @@ const ContactUs = () => {
                     </form>
                 </div>
             </div> 
+            {error && 
+                <Alert iconColor='red' 
+                    msgColor='red' 
+                    msg='Message not sent! Please check your network.' 
+                    setError={setError} 
+                    icon={faCircleXmark} 
+                    setAlert={setAlert}
+                />
+            }
         </>
     )
 }

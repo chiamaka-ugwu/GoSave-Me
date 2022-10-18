@@ -105,7 +105,7 @@ const Details = ({data}) => {
                  {data.patientData.hospital.address}
                 </p>
                 <p className="small small2 days-left">
-                  Days Left:
+                  Days Left: 
                   <span className="bold bold2">
                     30 days
                     <img src={circle} className="circle" />

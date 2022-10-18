@@ -1,17 +1,17 @@
 import React from 'react'
 import Nav from '../components/nav/Nav';
-import HowItWorks from '../components/how-it-works/HowItWorks';
+import AboutUs from '../components/about-us/AboutUs';
 import Footer from '../components/footer/Footer';
 
-const HowItWorksPage = () => {
+const AboutUsPage = () => {
     window.scroll(0, 0);
     return (
         <>
-            <Nav className='nav2' works='active-nav' />
-            <HowItWorks />
+            <Nav className='nav2' />
+            <AboutUs />
             <Footer />
         </>
     )
 }
 
-export default HowItWorksPage
+export default AboutUsPage

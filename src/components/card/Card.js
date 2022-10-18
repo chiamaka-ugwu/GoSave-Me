@@ -13,18 +13,53 @@ import CardMedia from "@mui/material/CardMedia";
 // import Typography from '@mui/material/Typography';
 // import { CardActionArea } from '@mui/material';
 
-const Cards = ({ className, data, edit }) => {
+const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
   AOS.init();
   const baseURL =
     "https://jsqckivnjimadtyuxblt.supabase.co/storage/v1/object/public/";
   const navigate = useNavigate();
 
+  const endCampaign = () => {
+    setloader(true);
+    supabase
+      .from("patients")
+      .update({
+        active: false,
+        status: "ENDED",
+      })
+      .eq("id", data.id)
+      .then((response) => {
+        setloader(false);
+      })
+      .catch((error) => {
+        setloader(false);
+      });
+  };
+
+  const withdraw = () => {
+    setloader(true);
+    supabase
+      .from("patients")
+      .update({
+        withdrawn: "PENDING",
+      })
+      .eq("id", data.id)
+      .then((response) => {
+        setloader(false);
+      })
+      .catch((error) => {
+        setloader(false);
+      });
+  };
+
   return (
     <>
+      {/* {console.log(data)} */}
+
       <div
         className={`card ${className}`}
         data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="1500"
       >
         <div className="card-content">
           <div className="img-container">
@@ -96,9 +131,87 @@ const Cards = ({ className, data, edit }) => {
         {edit && (
           <>
             <div className="box-group">
-              <Button btnName="End Campaign" btnClass="dashboard-btn" />
-              <Button btnName="Request Funds" btnClass="dashboard-btn" />
+              {data.active == true ? (
+                <>
+                  {loader == true ? (
+                    <>
+                      <Button
+                        btnName="please wait..."
+                        btnClass="dashboard-btn"
+                        style={{ opacity: "0.4", cursor: "no-drop" }}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <Button
+                        btnName="End Campaign"
+                        btnClass="dashboard-btn"
+                        onClick={() => {
+                          // console.log("Hello");
+                          endCampaign();
+                        }}
+                      />
+                    </>
+                  )}
+                </>
+              ) : (
+                <>
+                  <Button
+                    btnName="End Campaign"
+                    style={{ opacity: "0.4", cursor: "no-drop" }}
+                    btnClass="dashboard-btn"
+                  />
+                </>
+              )}
+
+              {data.withdrawn == "NO" && (
+                <>
+                  <Button
+                    btnName="Request Funds"
+                    btnClass="dashboard-btn"
+                    onClick={() => {
+                      withdraw();
+                    }}
+                  />
+                </>
+              )}
+              {data.withdrawn == "PENDING" && (
+                <>
+                  <Button
+                    btnName="Pending request"
+                    btnClass="dashboard-btn"
+                    style={{ opacity: "0.4", cursor: "no-drop" }}
+                  />
+                </>
+              )}
+              {data.withdrawn == "WITHDRAWN" && (
+                <>
+                  <Button
+                    btnName="Funds withdrawn"
+                    btnClass="dashboard-btn"
+                    style={{ opacity: "0.4", cursor: "no-drop" }}
+                  />
+                </>
+              )}
             </div>
+            {data.active == false && (
+              <>
+                {data.status == "AWAITING" && (
+                  <>
+                    <div style={{ textAlign: "center", padding: "10px" }}>
+                      <span style={{ color: "crimson" }}>Waiting approval</span>
+                    </div>
+                  </>
+                )}
+                {data.status == "ENDED" && (
+                  <>
+                    <div style={{ textAlign: "center", padding: "10px" }}>
+                     <small>End campaign</small> <b style={{ color: "crimson",cursor:"pointer" }}> Delete </b>?
+                    </div>
+                  </>
+                )}
+              </>
+            )}
           </>
         )}
       </div>

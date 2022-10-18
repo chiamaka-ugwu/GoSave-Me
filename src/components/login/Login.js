@@ -5,6 +5,7 @@ import Button from "../../components/button/Button";
 import { Link, useNavigate } from "react-router-dom";
 import Modal2 from "../modal/Modal2";
 import supabase from "../../config/supabase";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const initialFormData = {
   email: "",
@@ -12,6 +13,7 @@ const initialFormData = {
 };
 
 const Login = () => {
+  const [loader, setLoader] = useState(false);
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState(initialFormData);
 
@@ -23,6 +25,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handleSumbit = async (e) => {
     // e.preventDefault();
+    setLoader(true);
     supabse_conn.auth
       .signIn({
         email: formData.email,
@@ -32,21 +35,30 @@ const Login = () => {
         console.log(data);
         if (data.data == null) {
           alert(data.error.message);
+          setLoader(false);
         } else {
-            navigate("/dashboard")
-        } 
+          setLoader(false);
+          navigate("/dashboard");
+        }
       })
       .catch((e) => {
         console.log(e);
+        setLoader(false);
       });
     // console.log(supabase())
   };
 
   return (
     <>
+      {loader == true && (
+        <div className="modal" style={{ color: "#fff" }}>
+          <CircularProgress color="inherit" />
+        </div>
+      )}
+
       <div className="login">
         <div className="left">
-          <div className="login-form" onSubmit={() => {}}>
+          <div className="login-form">
             <h3>Log In</h3>
             <input
               type="text"

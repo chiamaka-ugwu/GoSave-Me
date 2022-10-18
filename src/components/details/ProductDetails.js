@@ -111,8 +111,8 @@ const ProductDetails = () => {
                   </>
                 ) : (
                   <>
-                    <h4>No patient in same location</h4>
-                  <span>Other Patients</span>
+                    <h4>No patient in same location, view other patients:</h4>
+                  {/* <span>Other Patients</span> */}
                     {random_patients_function()}
                   </>
                 )}

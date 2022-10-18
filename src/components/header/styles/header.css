@@ -36,15 +36,21 @@
     margin: 2rem 0 0 5rem;
     color: #222;
 }
-.card-section{
+.section{
     width: 100%;
     height: auto;
     background-color: #DFF4D7;
     margin-top: 3rem;
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     padding: 2rem 0;
+}
+.card-section{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    margin-left: 6rem;
 }
 .view-more{
     padding: 0 0 5rem 0;

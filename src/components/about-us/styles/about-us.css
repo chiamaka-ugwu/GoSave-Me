@@ -1,0 +1,94 @@
+.about-us{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.about-us .left{
+    width: 65%;
+}
+.about-us .left h1, h3{
+    color: #5FC738;
+    margin-bottom: 0.5rem;
+}
+.about-us .left p{
+    font-size: 14px;
+    line-height: 22px;
+    color: #222;
+}
+.about-us .right{
+    width: 25%;
+}
+.mission{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.mission .cont{
+    border: 1px solid linear-gradient(144.73deg, rgba(255, 255, 255, 0.4) 11.85%, rgba(160, 56, 199, 0.2) 44.56%, rgba(160, 56, 199, 0.3) 69.78%, rgba(160, 56, 199, 0.4) 98.32%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 46%;
+    padding: 1.5rem 0;
+}
+.mission .cont h3{
+    text-align: center;
+}
+.mission .cont p{
+    width: 80%;
+    margin: auto;
+}
+.meet{
+    width: 80%;
+    margin: 5rem auto;
+}
+.meet h3{
+    color: #5FC738;
+    margin-bottom: 2rem;
+}
+.meet-team{
+    display: flex;
+    justify-content: space-between;
+}
+.team{
+    text-align: center;
+}
+.team img{
+    padding: 20px;
+    border: 2px solid #5FC738;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.team h4{
+    margin-bottom: 0.5rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .about-us{
+        flex-direction: column;
+    }
+    .about-us .left{
+        width: 100%;
+    }
+    .about-us .left h1, .meet h3{
+        text-align: center;
+    }
+    .about-us p{
+        text-align: center;
+    }
+    .about-us .right{
+        display: none;
+    }
+    .mission{
+        flex-direction: column;
+        gap: 2rem;
+    }  
+    .mission .cont{
+        width: 100%;
+    }  
+    .meet-team{
+        flex-direction: column;
+    }
+}

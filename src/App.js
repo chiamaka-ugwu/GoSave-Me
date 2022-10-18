@@ -11,6 +11,7 @@ import SignUpPage from "./pages/SignUpPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 function App() {
     return (
@@ -28,6 +29,8 @@ function App() {
                     <Route path="/admin-dashboard" element={<AdminDashboardPage />} />
                     <Route path="/how-it-works" element={<HowItWorksPage />} />
                     <Route path="/contact-us" element={<ContactUsPage />} />
+                    <Route path="/about-us" element={<AboutUsPage />} />
+
                 </Routes>
             </Router>
         </>

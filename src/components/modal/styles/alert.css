@@ -1,9 +1,26 @@
 .alert-box{
     width: fit-content;
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
 }
 .alert-icon{
     font-size: 25px;
     margin-bottom: 0.5rem;
+}
+.alert-h3{
+    color: black;
+}
+.green{
     color: #5FC738;
+}
+.red{
+    color: #f63a3a;
+}
+
+
+@media screen and (max-width:1000px) {
+    .alert-box{
+        width: 50%;
+        padding: 1rem 2rem;
+    }
+    
 }

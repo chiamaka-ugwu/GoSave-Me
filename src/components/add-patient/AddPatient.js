@@ -6,15 +6,25 @@ import TestImg from "../../assets/images/patient2.png";
 import Button from "../button/Button";
 import supabase from "../../config/supabase";
 import { Link, useNavigate } from "react-router-dom";
+import Alert from "../../components/modal/Alert";
+import {
+  faCircleCheck,
+  faCircleXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const AddPatient = () => {
   const [patientData, setPatientData] = useState({
-    currency: "₦"
+    currency: "₦",
   });
   const supabse_conn = supabase();
   const navigate = useNavigate();
   const user_data = supabse_conn.auth.user(); // get logged in hospital
   const [User, setuser] = useState(null);
+
+  const [loader, setLoader] = useState(false);
+  const [alert, setAlert] = useState(false);
+  const [error, setError] = useState(false);
 
   const addPatient = () => {
     // console.log(imgHandler);
@@ -32,8 +42,9 @@ const AddPatient = () => {
           nextOfKinPhone: patientData.nextOfKinPhone,
           patientData: {
             ...newPatData,
-            hospital:User
+            hospital: User,
           },
+          hospital:User.id
         })
         .then(() => {
           setimgPrevState({
@@ -65,16 +76,20 @@ const AddPatient = () => {
             if (selectRes.data[0].status == true) {
               insert();
             } else {
-              alert("Active Patient");
+              // alert("Active Patient"); 
+              setError(true);
             }
           }
         } else {
-          alert("error occured");
+          // alert("error occured");
+          console.log('error');
         }
         setLoader(false);
+        setAlert(true);
       })
       .catch((error) => {
-        alert("Error occured");
+        // alert("Error occured");
+        console.log('error');
       });
   };
 
@@ -83,7 +98,6 @@ const AddPatient = () => {
     images: [],
     count: 0,
   });
-  const [loader, setLoader] = useState(false);
 
   const bucketHelper = (file) => {
     setLoader(true);
@@ -165,21 +179,34 @@ const AddPatient = () => {
     <>
       {loader == true && (
         <>
-          <div
-            style={{
-              position: "fixed",
-              left: "0px",
-              top: "0px",
-              width: "100%",
-              height: "100%",
-              background: "rgb(0,0,0,0.6)",
-              zIndex: "10000",
-            }}
-          ></div>
+          <div className="modal" style={{ color: "#fff" }}>
+            <CircularProgress color="inherit" />
+          </div>
         </>
       )}
 
-      {/* {console.log("refreshed")}  */}
+      {alert && (
+        <Alert
+          msgColor="green"
+          iconColor="green"
+          msg="Patient Added Succesfully!"
+          setAlert={setAlert}
+          setError={setError}
+          icon={faCircleCheck}
+        />
+      )}
+
+      {error && (
+        <Alert
+          msgColor="red"
+          iconColor="red"
+          msg="Patient Already Registered!"
+          setAlert={setAlert}
+          setError={setError}
+          icon={faCircleCheck}
+        />
+      )}
+
       <form
         className="add-patient"
         onSubmit={(e) => {
