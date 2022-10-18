@@ -91,6 +91,7 @@
         flex-flow: column wrap;
         margin-top: 2rem;
         padding: 1rem 0;
+        margin-left: 0;
     }
     .view-more a{
         margin-right: 1.5rem;
