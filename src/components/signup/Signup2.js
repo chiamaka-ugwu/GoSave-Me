@@ -1,10 +1,32 @@
 import React from "react";
 import "./styles/signup2.css";
-import Button from "../../components/button/Button";
+import Button1 from "../../components/button/Button";
 import notice from "../../assets/images/notice.png";
 
+import { UploadOutlined } from '@ant-design/icons';
+import { Button, message, Upload } from 'antd';
+
 const Signup2 = ({ action, data, setData }) => {
-    // window.scroll(0, 0)
+    window.scroll(0, 0)
+
+    const props = {
+        name: 'file',
+        action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+        headers: {
+          authorization: 'authorization-text',
+        },
+        onChange(info) {
+          if (info.file.status !== 'uploading') {
+            console.log(info.file, info.fileList);
+          }
+        //   if (info.file.status === 'done') {
+        //     message.success(`${info.file.name} file uploaded successfully`);
+        //   } else if (info.file.status === 'error') {
+        //     message.error(`${info.file.name} file upload failed.`);
+        //   }
+        },
+    };
+
     return (
         <>
             <h4 className="signup-h4">Sign Up to Get Started</h4>
@@ -110,10 +132,14 @@ const Signup2 = ({ action, data, setData }) => {
                     placeholder="Organisation Website URL"
                     className="login-input account"
                 />
-                <label for="file" className="account2 hospital-logo">
-                    <input type="file" name="hospital-logo" className="file" />
+                {/* <label for="inputTag" className="account2 hospital-logo">
+                    <input type="file" name="hospital-logo" className="file" id='inputTag' />
                     <span>Upload Logo</span>
-                </label>
+                    <span id="imageName"></span>
+                </label> */}
+                <Upload {...props} >
+                    <Button className="hospital-logo" icon={<UploadOutlined />}>Upload Logo</Button>
+                </Upload>
             </div>
             <h5 className="bank">Social Media Handles</h5>
             <div className="account-box account-box2">
@@ -166,7 +192,7 @@ const Signup2 = ({ action, data, setData }) => {
                     >
                     Previous
                 </p>
-                <Button
+                <Button1
                     btnName="Continue"
                     btnClass="continue-btn"
                     onClick={() => {

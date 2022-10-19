@@ -30,7 +30,6 @@ function App() {
                     <Route path="/how-it-works" element={<HowItWorksPage />} />
                     <Route path="/contact-us" element={<ContactUsPage />} />
                     <Route path="/about-us" element={<AboutUsPage />} />
-
                 </Routes>
             </Router>
         </>

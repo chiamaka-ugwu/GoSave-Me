@@ -93,7 +93,7 @@ const Login = () => {
             </p>
             <p className="login-text">
               {" "}
-              <span>Do not have an account?</span>
+              <span className="do">Do not have an account?</span>
               <Link to="/signup">Sign Up</Link>{" "}
             </p>
           </div>

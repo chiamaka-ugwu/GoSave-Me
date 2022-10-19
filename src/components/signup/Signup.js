@@ -156,7 +156,7 @@ const Signup = () => {
                         hospitalName: e.target.value,
                       });
                     }}
-                    required
+                    // required
                     value={data.hospitalName}
                     type="text"
                     name="hospital-name"

@@ -55,7 +55,7 @@ input::placeholder{
 .login-form .login-text{
     cursor: pointer;
 }
-.login-form span{
+.login-form .do{
     color: #fff;
     margin-right: 1rem;
 }
@@ -82,7 +82,6 @@ input::placeholder{
         top: 0;
         left: 0;
         padding: 0;
-
     }
     .login .left .logo{
         display: none;

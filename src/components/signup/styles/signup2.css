@@ -20,26 +20,31 @@
     align-items: center;
 }
 .hospital-logo{
-    height: 50px;
+    height: 55px;
     border-radius: 10px;
     background: transparent;
     border: 1px solid #fff;
-    display: flex;
-    flex-direction: column; 
-    position: relative;
+    color: #fff;
+    text-align: center;
+    width: 150px;
+    font-size: 16px;
 }
-.file{
-    visibility: hidden;
-    position: absolute;
-    top: 0.7rem;
+/* .file{ */
+    /* visibility: hidden; */
+    /* position: absolute; */
+    /* top: 0.7rem; */
     /* left: 2rem; */
-    z-index: 2;
-}
-.hospital-logo span{
+    /* z-index: 2; */
+    /* display: none; */
+/* } */
+/* .hospital-logo span{
     position: absolute;
-    top: 0.2rem;
-    left: 2rem;
-}
+    top: 0.5rem;
+    left: 2.5rem;
+} */
+/* #imageName{
+    color: black;
+}  */
 .social{
     width: 30%;
 }
