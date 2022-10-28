@@ -8,7 +8,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 .modal-box{
     width: 35%;
@@ -65,6 +65,7 @@
 }
 .anonymous{
     display: flex;
+    align-items: flex-start;
 }
 .anonymous p{
     font-size: 12px;
@@ -73,6 +74,43 @@
 .form-submit1{
     width: 100%;
 }
+
+
+
+/* CONTRIBUTORS MODAL */
+.cont-box{
+    text-align: unset;
+    height: 400px;
+    position: relative;
+    overflow: auto;
+}
+.cont-content{
+    width: 80% !important;
+}
+.contr{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -2.5rem;
+}
+.cont-h3{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.cont-cancel{
+    position: absolute;
+    bottom: 2rem;
+}
+.notice-icon{
+    width: 15px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 @media screen and (max-width:1000px){
     .modal-box{

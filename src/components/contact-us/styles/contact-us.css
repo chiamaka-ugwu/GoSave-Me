@@ -47,11 +47,20 @@
 }
 .contact-links{
     display: flex;
-    width: fit-content;
-    /* background-color: red; */
+    justify-content: space-between;
+    width: 15%;
+    margin-top: 2rem;
 }
-.contact-links img{
-    /* width: 10px; */
+.contact-links .icon{
+    font-size: 30px;
+    color: #A038C7;
+}
+.icon2{
+    font-size: 25px;
+    color: #A038C7;
+}
+.icon:hover, .icon2:hover{
+    color: #5FC738;
 }
 
 

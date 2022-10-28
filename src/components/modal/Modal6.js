@@ -16,42 +16,6 @@ const Modal6 = ({setIsModal, data, setData, signUpForm, verifyOTP, signupFinally
                             address and phone number. Please enter the code that was sent to you.
                         </p>
                         <div className="verification-code">
-                            {/* <input 
-                                onChange={(e) => {
-                                    setData({
-                                        ...data,
-                                    code1: e.target.value,
-                                    });
-                                }}
-                                value={data.code1}
-                                type="tel" 
-                                className='code' 
-                                name="code1" 
-                            />
-                            <input 
-                                onChange={(e) => {
-                                    setData({
-                                        ...data,
-                                    code2: e.target.value,
-                                    });
-                                }}
-                                value={data.code2}
-                                type="tel" 
-                                className='code' 
-                                name="code2" 
-                            />
-                            <input 
-                                onChange={(e) => {
-                                    setData({
-                                        ...data,
-                                    code3: e.target.value,
-                                    });
-                                }}
-                                value={data.code3}
-                                type="tel" 
-                                className='code' 
-                                name="code3" 
-                            /> */}
                             <input 
                                 onChange={(e) => {
                                     setotp(e.target.value) 

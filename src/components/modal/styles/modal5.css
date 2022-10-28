@@ -5,9 +5,10 @@
     width: 100%;
     padding: 20px;
     font-size: 1.2rem;
-    color: #A038C7;
     outline: none;
     border: 2px solid #A038C7;
+    font-weight: 600;
+    letter-spacing: 1rem;
 }
 .radio-group{
     display: flex;

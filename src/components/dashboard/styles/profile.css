@@ -32,6 +32,17 @@
 .change-logo{
     padding: 12px 40px;
 }
+.change{
+    position: relative;
+}
+.file{
+    /* visibility: hidden; */
+    position: absolute;
+    /* top: 0.2rem; */
+    /* left: 2rem; */
+    z-index: 2;
+    /* display: none; */
+} 
 .logo-btns .delete{
     margin-top: 1rem;
     display: flex;

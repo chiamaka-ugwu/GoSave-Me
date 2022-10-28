@@ -3,9 +3,9 @@ import "./styles/alert.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const Alert = ({msg, setAlert, icon, msgColor, iconColor, setError }) => {
+const Alert = ({msg, setAlert, icon, msgColor, iconColor, setError, alert }) => {
     return (
-        <>
+        <> 
             <div className="alert" 
                 onClick={() => {
                     setError(false); 

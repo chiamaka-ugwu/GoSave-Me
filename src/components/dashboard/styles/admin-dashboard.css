@@ -107,6 +107,12 @@ th,td {
     color: #A038C7;
     cursor: pointer;
 }
+.sign-h3{
+    margin-top: 5rem;
+}
+/* .fund-h3{
+    margin-left: 6rem;
+} */
 
 
 @media screen and (max-width:1000px) {

@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .how-it-works .left, .how-it-works .right{
     width: 48%;
@@ -26,11 +27,13 @@
 }
 .group-text h1{
     color: #5FC738;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 .group-text h3{
     color: #222;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
 }
 .group2 h3{
     color: #5FC738;
@@ -66,6 +69,20 @@
     font-size: 14px ;
 }
 
+
+.how h3{
+    margin-top: 1rem;
+}
+.round-icon{
+    color: #A038C7;
+    font-size: 30px;
+    padding: 10px;
+    background: #DFF4D7;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.2rem;
+    left: 45%;
+}
 
 
 

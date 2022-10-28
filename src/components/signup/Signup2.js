@@ -3,8 +3,8 @@ import "./styles/signup2.css";
 import Button1 from "../../components/button/Button";
 import notice from "../../assets/images/notice.png";
 
-import { UploadOutlined } from '@ant-design/icons';
-import { Button, message, Upload } from 'antd';
+// import { UploadOutlined } from '@ant-design/icons';
+// import { Button, message, Upload } from 'antd';
 
 const Signup2 = ({ action, data, setData }) => {
     window.scroll(0, 0)
@@ -132,14 +132,6 @@ const Signup2 = ({ action, data, setData }) => {
                     placeholder="Organisation Website URL"
                     className="login-input account"
                 />
-                {/* <label for="inputTag" className="account2 hospital-logo">
-                    <input type="file" name="hospital-logo" className="file" id='inputTag' />
-                    <span>Upload Logo</span>
-                    <span id="imageName"></span>
-                </label> */}
-                <Upload {...props} >
-                    <Button className="hospital-logo" icon={<UploadOutlined />}>Upload Logo</Button>
-                </Upload>
             </div>
             <h5 className="bank">Social Media Handles</h5>
             <div className="account-box account-box2">

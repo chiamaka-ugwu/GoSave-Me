@@ -1,17 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/card.css";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import patient from "../../assets/images/patient.png";
+import { Link, useNavigate } from "react-router-dom";
 import circle from "../../assets/images/i-circle.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Button from "../button/Button";
-
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
 import CardMedia from "@mui/material/CardMedia";
-// import Typography from '@mui/material/Typography';
-// import { CardActionArea } from '@mui/material';
+import Popover from "@mui/material/Popover";
+import Typography2 from "@mui/material/Typography";
 
 const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
   AOS.init();
@@ -52,6 +48,16 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
       });
   };
 
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose2 = () => {
+    setAnchorEl(null);
+  };
+  const open2 = Boolean(anchorEl);
+  const id = open2 ? "simple-popover" : undefined;
+
   return (
     <>
       {/* {console.log(data)} */}
@@ -70,7 +76,6 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
                 image={baseURL + data.patientData.images[0]}
                 alt="patient"
               />
-              {/* <img className='patient-img' src={baseURL+data.patientData.images[0]} alt="patient" /> */}
             </Link>
           </div>
           <div
@@ -118,11 +123,30 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
               <p className="small">Name of Hospital</p>
               <p className="bold"> {data.patientData.hospital.name} </p>
               <p className="small days-left">
-                Days Left:
-                <span className="bold">
-                  {" "}
-                  30 days
-                  <img src={circle} className="circle" />
+                Deadline:
+                <span style={{marginLeft: "0.5rem"}} className="bold">
+                  {data.patientData.deadline}
+                  {/* <img
+                    src={circle}
+                    className="circle"
+                    onClick={handleClick}
+                    aria-describedby={id}
+                    variant="contained"
+                  /> */}
+                  <Popover
+                    id={id}
+                    open2={open2}
+                    anchorEl={anchorEl}
+                    onClose={handleClose2}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left",
+                    }}
+                  >
+                    <Typography2 sx={{ p: 2 }}>
+                      This is the date the campaign will expire.
+                    </Typography2>
+                  </Popover>
                 </span>
               </p>
             </div>
@@ -206,7 +230,12 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
                 {data.status == "ENDED" && (
                   <>
                     <div style={{ textAlign: "center", padding: "10px" }}>
-                     <small>End campaign</small> <b style={{ color: "crimson",cursor:"pointer" }}> Delete </b>?
+                      <small>End campaign</small>{" "}
+                      <b style={{ color: "crimson", cursor: "pointer" }}>
+                        {" "}
+                        Delete{" "}
+                      </b>
+                      ?
                     </div>
                   </>
                 )}

@@ -203,7 +203,7 @@ const AddPatient = () => {
           msg="Patient Already Registered!"
           setAlert={setAlert}
           setError={setError}
-          icon={faCircleCheck}
+          icon={faCircleXmark}
         />
       )}
 
@@ -392,6 +392,15 @@ const AddPatient = () => {
                 <option value="Oct. 2022">Oct. 2022</option>
                 <option value="Nov. 2022">Nov. 2022</option>
                 <option value="Dec. 2022">Dec. 2022</option>
+                <option value="Jan. 2023">Dec. 2022</option>
+                <option value="Feb. 2023">Dec. 2022</option>
+                <option value="Mar. 2023">Dec. 2022</option>
+                <option value="Apr. 2023">Dec. 2022</option>
+                <option value="May. 2023">Dec. 2022</option>
+                <option value="June. 2023">Dec. 2022</option>
+                <option value="July. 2023">Dec. 2022</option>
+                <option value="Aug. 2023">Dec. 2022</option>
+
               </select>
               <img src={info} className="info" alt="info" />
             </div>

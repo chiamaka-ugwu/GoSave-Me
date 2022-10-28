@@ -5,6 +5,7 @@ import SearchBar from "../search-bar/SearchBar";
 import Card from "../card/Card";
 import { Link, useParams } from "react-router-dom";
 import supabase from "../../config/supabase";
+import { CircularProgress } from "@mui/material";
 
 const ProductDetails = () => {
   const { userID } = useParams();
@@ -17,10 +18,11 @@ const ProductDetails = () => {
   const fetch = () => {
     newSupabase
       .from("patients")
-      .select("*")
+      .select(`*, contributors(*)`)
       // .eq("id", userID)
       .then((res) => {
         // get actual user
+        // console.log(res)
         const actual_user = res.data.filter((e) => e.id == userID)[0];
         setPatientData(actual_user);
 
@@ -38,9 +40,7 @@ const ProductDetails = () => {
         setLocation(filtered_patient);
 
         // filter random patients
-        const random_patient = res.data.filter(
-          (e) => e.id != actual_user.id
-        );
+        const random_patient = res.data.filter((e) => e.id != actual_user.id);
         setrandom_patients(random_patient);
       })
       .catch((error) => {});
@@ -54,9 +54,9 @@ const ProductDetails = () => {
     return location.map((e) => {
       return (
         <>
-        <article>
-            <Card className="prod-card" data={e} /> 
-        </article> 
+          <article>
+            <Card className="prod-card" data={e} />
+          </article>
         </>
       );
     });
@@ -66,9 +66,9 @@ const ProductDetails = () => {
     return random_patients.map((e) => {
       return (
         <>
-        <article>
-            <Card className='prod-card' data={e} />
-        </article> 
+          <article>
+            <Card className="prod-card" data={e} />
+          </article>
         </>
       );
     });
@@ -76,16 +76,28 @@ const ProductDetails = () => {
 
   return (
     <>
-      {console.log(random_patients)}
+      {/* {console.log(random_patients)} */}
       <div className="prod-details">
         <div className="prod-left">
-          {patientData ? (
+          {loading == true ? (
             <>
-              <Details data={patientData} />
+              <div className="modal" style={{ color: "#fff" }}>
+                <CircularProgress color="inherit" />
+              </div>
             </>
           ) : (
             <>
-              <span>Loading.....</span>
+              {patientData ? (
+                <>
+                  <Details data={patientData} />
+                </>
+              ) : (
+                <>
+                  <div className="modal" style={{ color: "#fff" }}>
+                    <CircularProgress color="inherit" />
+                  </div>
+                </>
+              )}
             </>
           )}
         </div>
@@ -97,23 +109,24 @@ const ProductDetails = () => {
               <Card className='prod-card' />
               </article> */}
 
-            <h4>Patients in the same location </h4>
 
             {loading == true ? (
               <>
-                <span>Loading.....</span>
+                <div className="modal" style={{ color: "#fff" }}>
+                  <CircularProgress color="inherit" />
+                </div>
               </>
             ) : (
               <>
                 {location.length > 0 ? (
                   <>
+                    <h4>Patients in the same location </h4>
                     <article>{Location_patients()}</article>
                   </>
                 ) : (
                   <>
-                    <h4>No patient in same location, view other patients:</h4>
-                  {/* <span>Other Patients</span> */}
-                    {random_patients_function()}
+                    <h4>View other patients:</h4>
+                    <article>{random_patients_function()}</article>
                   </>
                 )}
               </>

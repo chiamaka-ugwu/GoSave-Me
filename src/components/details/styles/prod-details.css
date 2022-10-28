@@ -9,17 +9,22 @@
     margin-bottom: 3rem;
 }
 .prod-right h4{
-    margin-left: 6.5rem;
+    margin-left: 5.5rem;
     margin-top: 2rem;
+}
+.prod-right2{
+    display: flex;
+    flex-flow: column wrap;
 }
 article{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    /* background-color: red; */
 }
 .prod-card{
-    width: 35%;
+    width: 300px;
+    /* margin: 2rem; */
+    /* height: fit-content; */
 }
 
 

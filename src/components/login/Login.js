@@ -6,6 +6,12 @@ import { Link, useNavigate } from "react-router-dom";
 import Modal2 from "../modal/Modal2";
 import supabase from "../../config/supabase";
 import CircularProgress from "@mui/material/CircularProgress";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEye,
+  faEyeSlash,
+} from "@fortawesome/free-solid-svg-icons";
+
 
 const initialFormData = {
   email: "",
@@ -48,6 +54,11 @@ const Login = () => {
     // console.log(supabase())
   };
 
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePasswordVisiblity = () => {
+    setPasswordShown(passwordShown ? false : true);
+  };
+
   return (
     <>
       {loader == true && (
@@ -68,14 +79,17 @@ const Login = () => {
               value={formData.email}
               onChange={handleOnchange}
             />
-            <input
-              type="password"
-              name="password"
-              className="login-input"
-              placeholder="Password"
-              value={formData.password}
-              onChange={handleOnchange}
-            />
+            <div className="password-group">
+              <input
+                type={passwordShown ? "text" : "password"}
+                name="password"
+                className="login-input"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleOnchange}
+              />
+              <FontAwesomeIcon className="eye" onClick={togglePasswordVisiblity} icon={passwordShown ? faEye : faEyeSlash} />
+            </div>
             <div className="login-btn-cont">
               {/* <Link to='/dashboard'> */}
               <Button

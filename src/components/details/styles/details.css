@@ -16,7 +16,7 @@
     text-align: right;
 }
 .view{
-    text-decoration: none;
+    cursor: pointer;
     color: #A038C7;
 }
 .view:hover{
@@ -61,9 +61,9 @@
     justify-content: space-between;
     align-items: center;
 }
-.content5 a{
-    text-decoration: none;
+.content5 {
     color: #222;
+    cursor: pointer;
 }
 .card-footer{
     margin-top: 1rem;
@@ -88,7 +88,6 @@
 
 @media screen and (max-width:1000px) {
     .card-details{
-        width: 90%;
         margin: 3rem auto;
         padding: 1rem 0;
     }
@@ -101,8 +100,15 @@
     .content5{
         width: 100%;
     }
-    
-    
+    .img-modal{
+        width: 80% !important;
+    }
+    .patient-modal{
+        max-width: 250px;
+        max-height: 250px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
     
     
     

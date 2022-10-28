@@ -1,3 +1,6 @@
 .nav3{
     background-color: #DFF4D7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }

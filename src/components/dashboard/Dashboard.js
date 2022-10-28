@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "../button/Button";
 import Card from "../card/Card";
 import "./styles/dashboard.css";
 import supabase from "../../config/supabase";
 import Profile from "./Profile";
 import ContactDetails from "./ContactDetails";
+import { CircularProgress } from "@mui/material";
+
 
 const Dashboard = () => {
   const newSupabase = supabase();
@@ -21,8 +22,11 @@ const Dashboard = () => {
      Email = user_data.email;
   }
 
+  const [load, setLoad] = useState(false);
+
+
   const fetch = () => {
-    // setloader(true);
+    setLoad(true);
     newSupabase
       .from("patients")
       .select("*")
@@ -33,20 +37,25 @@ const Dashboard = () => {
         } else {
           if (res.data.length > 0) {
             setPatientData(res.data);
+            setLoad(false);
           } else {
             setPatientData([]);
+            setLoad(false);
+
           }
         }
         // setloader(false);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        setLoad(false);
+      });
   };
 
   useEffect(() => {
     getUser();
     fetch();
     // console.log(user);
-  });
+  },[]);
   const getUser = () => {
     // setloader(true);
     newSupabase
@@ -91,6 +100,13 @@ const Dashboard = () => {
   return (
     <>
       {/* {console.log(user_data)} */}
+      {load == true && (
+        <>
+          <div className="modal" style={{ color: "#fff" }}>
+            <CircularProgress color="inherit" />
+          </div>
+        </>
+      )}
       {page == 1 && (
         <div className="dashboard">
           <div className="left left1">

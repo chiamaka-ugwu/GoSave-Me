@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-import Button from "../button/Button";
 import "./styles/modal.css";
 import supabase from "../../config/supabase";
 import { PaystackButton } from "react-paystack";
 import Alert from "./Alert";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import notice from "../../assets/images/notice.png";
 
-const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
+import Popover from "@mui/material/Popover";
+import Typography from "@mui/material/Typography";
+
+const Modal = ({ setModal, patient, donate, donate_type, title }) => {
   const [checked, setChecked] = useState(true);
+
+  const [alert, setAlert] = useState(false);
+  const [error, setError] = useState(false);
+
 
   const handleChange = (event) => {
     setContribution({
@@ -57,15 +64,16 @@ const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
   };
 
   const addContributor = (reference) => {
-    const post = (table) => { 
-      supabse_conn 
+    const post = (table) => {
+      supabse_conn
         .from(table)
         .insert({
           name: contribution.name,
           email: contribution.email,
           location: contribution.location,
           amount: contribution.amount,
-          metadata: { ...contribution, reference, patient, type:donate_type },
+          metadata: { ...contribution, reference, patient, type: donate_type },
+          patients: patient.id,
         })
         .then((res) => {
           updatePatientAmountRaised();
@@ -79,16 +87,16 @@ const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
         });
     };
     if (donate && donate == true) {
-      supabse_conn 
+      supabse_conn
         .from("donations")
         .insert({
           name: contribution.name,
           email: contribution.email,
           location: contribution.location,
           amount: contribution.amount,
-          metadata: { ...contribution, reference, type:donate_type },
+          metadata: { ...contribution, reference, type: donate_type },
         })
-        .then((res) => { 
+        .then((res) => {
           setModal(false);
           // setAlert(true);
         })
@@ -96,7 +104,7 @@ const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
           alert(error);
         });
     } else {
-      post("contributors")
+      post("contributors");
     }
   };
 
@@ -128,10 +136,29 @@ const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
     onClose: handlePaystackCloseAction,
   };
 
+  // POPOVER
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
   return (
     <>
       {alert && (
-        <Alert msg="Success" setAlert={setAlert} icon={faCircleCheck} />
+        <Alert
+          msg="Success"
+          setAlert={setAlert}
+          alert={alert}
+          icon={faCircleCheck}
+          msgColor="green"
+          iconColor="green"
+          setError={setError}
+        />
       )}
       {console.log(patient)}
       <div className="modal" onClick={() => setModal(false)}>
@@ -139,7 +166,7 @@ const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
           className="modal-box modal-box1"
           onClick={(e) => e.stopPropagation()}
         >
-          <h3>Contribute To Save A Life</h3>
+          <h3>{title}</h3>
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -268,6 +295,29 @@ const Modal = ({ setModal, setAlert, patient, donate, donate_type }) => {
                 id="checkbox"
               />
               <p>Contribute Anonymously</p>
+              <img
+                src={notice}
+                alt="notice"
+                className="notice-icon"
+                onClick={handleClick}
+                aria-describedby={id}
+                variant="contained"
+              />
+              <Popover
+                style={{ zIndex: "10000" }}
+                id={id}
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+              >
+                <Typography sx={{ p: 2 }}>
+                  Donor's name will be Anonymous on the contributors list.
+                </Typography>
+              </Popover>
             </div>
             {/* <Button
               type="submit"
