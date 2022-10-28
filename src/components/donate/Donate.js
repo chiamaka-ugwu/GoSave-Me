@@ -8,6 +8,9 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import Diversity1TwoToneIcon from "@mui/icons-material/Diversity1TwoTone";
+import CreditScoreTwoToneIcon from '@mui/icons-material/CreditScoreTwoTone';
+import MedicalInformationTwoToneIcon from '@mui/icons-material/MedicalInformationTwoTone';
 
 const Donate = () => {
   const [modal, setModal] = useState(false);
@@ -25,8 +28,9 @@ const Donate = () => {
         </div>
       </div>
       <div className="donate-boxes">
-        <div className="donate-box">
+        <div className="donate-box how">
           <div className="box-content">
+            <Diversity1TwoToneIcon className="round-icon" />
             <h3>Support GoSaveMe Team</h3>
             <p>
               Encourage the GoSaveMe Team to keep the vision of this platform
@@ -44,8 +48,9 @@ const Donate = () => {
             />
           </div>
         </div>
-        <div className="donate-box">
+        <div className="donate-box how">
           <div className="box-content">
+            <CreditScoreTwoToneIcon className="round-icon" />
             <h3>Fund Patient Outreach</h3>
             <p>
               Our team visits hospitals occasionally to support patients, nurses
@@ -63,8 +68,9 @@ const Donate = () => {
             />
           </div>
         </div>
-        <div className="donate-box">
+        <div className="donate-box how">
           <div className="box-content">
+            <MedicalInformationTwoToneIcon className="round-icon" />
             <h3>Support Medical Research</h3>
             <p>
               We are partnering with medical institutions and teaching hospitals
