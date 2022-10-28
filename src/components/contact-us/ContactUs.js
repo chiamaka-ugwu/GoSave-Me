@@ -27,13 +27,20 @@ const ContactUs = () => {
         firstName: contactData.name,
         lastName: contactData.lastName,
         email: contactData.email,
-        description: contactData.description,
+        message: contactData.message,
         metadata: { ...contactData },
       })
       .then((res) => {
         if (res) {
           console.log(res);
           setAlert(true);
+          setContactData({
+            ...contactData,
+            name:'',
+            lastName:'',
+            email:'',
+            message:''
+          });
         }
       })
       .catch((error) => {
@@ -126,11 +133,11 @@ const ContactUs = () => {
               onChange={(e) => {
                 setContactData({
                   ...contactData,
-                  description: e.target.value,
+                  message: e.target.value,
                 });
               }}
-              value={contactData.description}
-              name="description"
+              value={contactData.message}
+              name="message"
               rows="5"
               placeholder="Message"
             ></textarea>

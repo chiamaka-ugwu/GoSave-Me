@@ -1,14 +1,49 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
 import FundRequest from "./FundRequest";
 import Overview from "./Overview";
 import Patients from "./Patients";
 import "./styles/admin-dashboard.css";
+import supabase from "../../config/supabase";
 
-const AdminDashboard = () => {
+
+
+const AdminDashboard = ({user}) => {
   const [page, setPage] = useState(1);
+
+  const newSupabase = supabase();
+  const [loader, setLoader] = useState();
+
+
+  const fetch = () => {
+    setLoader(true);
+    newSupabase
+    .from("hospitals")
+      .select("*")
+      .then((res) => {
+        // console.log(res.data);
+        // setPatientData(res.data);
+        setLoader(false);
+      })
+      .catch((error) => {
+        alert(error);
+        setLoader(false);
+      });
+  };
+
+  useEffect(() => {
+    fetch();
+  },[]);
+
+
+
+
+
+
+
   return (
     <>
+    {console.log(user)}
       {page == 1 && (
         <div className="dashboard admin">
           <div className="left left2">

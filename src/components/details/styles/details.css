@@ -84,6 +84,21 @@
 .days-left{
     margin-top: 1rem;
 }
+.carousel-status {
+    display: none;
+}
+
+.thumbs-wrapper {
+    display: none;
+}
+.carousel .control-dots {
+    position: relative !important;
+}
+.carousel{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 
 
 @media screen and (max-width:1000px) {

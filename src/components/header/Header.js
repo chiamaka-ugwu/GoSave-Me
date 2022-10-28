@@ -7,6 +7,9 @@ import Card from "../card/Card";
 import Modal from "../modal/Modal";
 import supabase from "../../config/supabase";
 import CircularProgress from "@mui/material/CircularProgress";
+import OfflineBoltTwoToneIcon from '@mui/icons-material/OfflineBoltTwoTone';
+import MenuBookTwoToneIcon from '@mui/icons-material/MenuBookTwoTone';
+import Diversity1TwoToneIcon from '@mui/icons-material/Diversity1TwoTone';
 
 const Header = () => {
   const [loader, setLoader] = useState(false);
@@ -83,30 +86,28 @@ const Header = () => {
       <div className="donate-boxes">
         <div className="donate-box how-box">
           <div className="box-content">
+            <OfflineBoltTwoToneIcon className="round-icon" />
             <h3>Easy and Fast</h3>
             <p>
-              Encourage the GoSaveMe Team to keep the vision of this platform
-              alive. Your support will always give us another reason to keep
-              pushing.
+              Creating a campaign and donating funds are done seamlessly on GOSAVEME.
             </p>
           </div>
         </div>
         <div className="donate-box how-box">
           <div className="box-content">
+            <MenuBookTwoToneIcon className="round-icon" />
             <h3>Transparent</h3>
             <p>
-              Our team visits hospitals occasionally to support patients, nurses
-              and doctors with gifts, food, cash, other materials and clear out
-              some medical bills.
+              All activities on the GOSAVEME platform are like an open book.
             </p>
           </div>
         </div>
         <div className="donate-box how-box">
           <div className="box-content">
+            <Diversity1TwoToneIcon className="round-icon" />
             <h3>Committed</h3>
             <p>
-              We are partnering with institutions to support them with funds to
-              carry out medical researches.
+              GOSAVEME is committed to leveraging crowd funding to save lives.
             </p>
           </div>
         </div>

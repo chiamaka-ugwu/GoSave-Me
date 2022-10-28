@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles/details.css";
-import circle from "../../assets/images/i-circle.png";
+// import circle from "../../assets/images/i-circle.png";
 import contributors from "../../assets/images/contributors.png";
 import share from "../../assets/images/share.png";
 import Button from "../button/Button";
@@ -30,6 +30,16 @@ import {
   WhatsappShareButton,
 } from "react-share";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faWhatsapp,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 const Details = ({ data }) => {
   const [modal, setModal] = useState(false);
   const [alert, setAlert] = useState(false);
@@ -50,7 +60,10 @@ const Details = ({ data }) => {
     bgcolor: "background.paper",
     boxShadow: 24,
     p: 4,
+    border: "none",
   };
+
+  const [icons, setIcons] = useState(false);
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -66,11 +79,23 @@ const Details = ({ data }) => {
   const open2 = Boolean(anchorEl);
   const id = open2 ? "simple-popover" : undefined;
 
+  const shareFacebook = require("share-facebook");
+  const Shr = () => {
+    shareFacebook({
+      quote: "Check this library to help you create share facebook url",
+      href: "https://bukinoshita.io",
+      redirect_uri: "https://bukinoshita.io",
+      app_id: "APP_ID",
+    });
+  };
+
   const otherImages = () => {
     return data.patientData.images.map((e) => {
       return (
         <>
-          <img className="patient-modal" src={baseURL + e} alt="patient" />
+          <div>
+            <img src={baseURL + e} className="patient-modal" alt="sick" />
+          </div>
         </>
       );
     });
@@ -149,9 +174,7 @@ const Details = ({ data }) => {
                       );
                     }}
                   >
-                    <div>{otherImages()}</div>
-                    {/* <div>{otherImages()}</div>
-                    <div>{otherImages()}</div> */}
+                    {otherImages()}
                   </Carousel>
                 </Box>
               </Fade>
@@ -231,7 +254,7 @@ const Details = ({ data }) => {
                 </p>
                 <p className="small small2 days-left">
                   Deadline:
-                  <span style={{marginLeft: "0.5rem"}} className="bold bold2">
+                  <span style={{ marginLeft: "0.5rem" }} className="bold bold2">
                     {data.patientData.deadline}
                     {/* <img
                       src={circle}
@@ -267,7 +290,12 @@ const Details = ({ data }) => {
                 </div>
                 <p className="bold bold2">Contributors</p>
               </div>
-              <div className="share">
+              <div
+                className="share"
+                onClick={() => {
+                  setIcons(!icons);
+                }}
+              >
                 <div className="icon">
                   <img src={share} alt="icon" />
                 </div>
@@ -279,10 +307,23 @@ const Details = ({ data }) => {
                 btnClass="card-footer-btn"
               />
             </div>
-            <div className="share-lin">
-              <FacebookShareButton />
-              <TwitterShareButton />
-            </div>
+            {icons == true && (
+              <div className="share-link">
+                <FontAwesomeIcon
+                  className="icon"
+                  icon={faFacebook}
+                  onClick={() => {
+                    Shr();
+                  }}
+                />
+                <FontAwesomeIcon className="icon" icon={faTwitter} />
+                <FontAwesomeIcon className="icon" icon={faInstagram} />
+                <FontAwesomeIcon className="icon" icon={faWhatsapp} />
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
+                <FontAwesomeIcon className="icon" icon={faEnvelope} />
+                <FacebookShareButton />
+              </div>
+            )}
           </div>
         </div>
       </div>

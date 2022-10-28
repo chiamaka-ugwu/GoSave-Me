@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles/profile.css";
 import notice from "../../assets/images/notice.png";
-import logo from "../../assets/images/logo.png";
-import Button from "../button/Button";
-import bin from "../../assets/images/bin.png";
 import CircularProgress from "@mui/material/CircularProgress";
 
 const Profile = ({ setPage, user }) => {

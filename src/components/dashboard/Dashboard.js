@@ -1,76 +1,74 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Card from "../card/Card";
 import "./styles/dashboard.css";
 import supabase from "../../config/supabase";
 import Profile from "./Profile";
 import ContactDetails from "./ContactDetails";
 import { CircularProgress } from "@mui/material";
-
+import AdminDashboard from "./AdminDashboard";
 
 const Dashboard = () => {
   const newSupabase = supabase();
   const navigateTo = useNavigate();
-  const [user, setuser] = useState("");
+  const [user, setuser] = useState();
   const [loader, setloader] = useState();
   const [patientData, setPatientData] = useState([]);
   const user_data = newSupabase.auth.user();
-  let Email = ""
+  let Email = "";
   if (user_data == null) {
     navigateTo("/");
   } else {
-     Email = user_data.email;
+    Email = user_data.email;
   }
 
-  const [load, setLoad] = useState(false);
-
+  const [load, setLoad] = useState(true);
 
   const fetch = () => {
-    setLoad(true);
+    // setLoad(true);
     newSupabase
       .from("patients")
       .select("*")
       .eq("hospital", user.id)
       .then((res) => {
+        console.log(res);
         if (res.error !== null) {
           // alert(res.error.message);
         } else {
           if (res.data.length > 0) {
             setPatientData(res.data);
-            setLoad(false);
           } else {
             setPatientData([]);
-            setLoad(false);
-
           }
         }
-        // setloader(false);
+        setLoad(false);
       })
       .catch((error) => {
         setLoad(false);
       });
   };
 
-  useEffect(() => {
-    getUser();
-    fetch();
-    // console.log(user);
-  },[]);
   const getUser = () => {
-    // setloader(true);
+    // setLoad(true);
     newSupabase
       .from("hospital")
       .select("*")
       .eq("email", Email)
       .then((res) => {
-        // console.log(res);
+        console.log(res.data[0].id);
         setuser(res.data[0]);
-        // setloader(false);
+
+        // setLoad(false);
       })
       .catch((error) => {
         // console.log(error);
+        setLoad(false);
       });
   };
+
+  useEffect(() => {
+    getUser(); 
+  }, []);
 
   const patients = () => {
     if (patientData.length < 1) {
@@ -99,7 +97,7 @@ const Dashboard = () => {
 
   return (
     <>
-      {/* {console.log(user_data)} */}
+    {user != undefined && fetch() } 
       {load == true && (
         <>
           <div className="modal" style={{ color: "#fff" }}>
@@ -154,6 +152,11 @@ const Dashboard = () => {
           <ContactDetails user={user} setPage={setPage} />
         </>
       )}
+
+      { <>
+          <AdminDashboard user={user} />
+        </>
+      }
     </>
   );
 };
