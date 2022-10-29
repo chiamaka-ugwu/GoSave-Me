@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./styles/add-patient.css";
 import info from "../../assets/images/i-circle.png";
 import add from "../../assets/images/add.png";
-import TestImg from "../../assets/images/patient2.png";
 import Button from "../button/Button";
 import supabase from "../../config/supabase";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Alert from "../../components/modal/Alert";
 import {
   faCircleCheck,
@@ -392,14 +391,14 @@ const AddPatient = () => {
                 <option value="Oct. 2022">Oct. 2022</option>
                 <option value="Nov. 2022">Nov. 2022</option>
                 <option value="Dec. 2022">Dec. 2022</option>
-                <option value="Jan. 2023">Dec. 2022</option>
-                <option value="Feb. 2023">Dec. 2022</option>
-                <option value="Mar. 2023">Dec. 2022</option>
-                <option value="Apr. 2023">Dec. 2022</option>
-                <option value="May. 2023">Dec. 2022</option>
-                <option value="June. 2023">Dec. 2022</option>
-                <option value="July. 2023">Dec. 2022</option>
-                <option value="Aug. 2023">Dec. 2022</option>
+                <option value="Jan. 2023">Jan. 2023</option>
+                <option value="Feb. 2023">Feb. 2023</option>
+                <option value="Mar. 2023">Mar. 2023</option>
+                <option value="Apr. 2023">Apr. 2023</option>
+                <option value="May. 2023">May 2023</option>
+                <option value="June. 2023">Jun. 2023</option>
+                <option value="July. 2023">Jul. 2023</option>
+                <option value="Aug. 2023">Aug. 2023</option>
 
               </select>
               <img src={info} className="info" alt="info" />

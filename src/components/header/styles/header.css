@@ -3,7 +3,7 @@
     height: 80vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url(../../../assets/images/home.png);
+    background-image: url(../../../assets/images/background.jpg);
     margin-top: -6rem;
 }
 .intro{
@@ -89,9 +89,9 @@
 
 @media screen and (max-width: 1000px) {
     .landing-page{
-        height: 90vh;
+        height: 62vh;
         margin-top: 0;
-        background-image: url(../../../assets/images/home-mobile.png);
+        background-image: url(../../../assets/images/background.jpg);
     }
     .intro{
         width: 90%;
