@@ -303,19 +303,19 @@ const Details = ({ data }) => {
             </div>
             {icons == true && (
               <div className="share-link">
-                <FacebookShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                <FacebookShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
                   <FontAwesomeIcon className="icon1 facebook" icon={faFacebook} />
                 </FacebookShareButton>
-                <TwitterShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                <TwitterShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
                   <FontAwesomeIcon className="icon1 twitter" icon={faTwitter} />
                 </TwitterShareButton>
-                <WhatsappShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                <WhatsappShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
                   <FontAwesomeIcon className="icon1 whatsapp" icon={faWhatsapp} />
                 </WhatsappShareButton>
-                <LinkedinShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                <LinkedinShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
                   <FontAwesomeIcon className="icon1 linkedin" icon={faLinkedin} />
                 </LinkedinShareButton>
-                <EmailShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                <EmailShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
                   <FontAwesomeIcon className="icon1 gmail" icon={faEnvelope} />
                 </EmailShareButton>
               </div>

@@ -69,7 +69,7 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
       >
         <div className="card-content">
           <div className="img-container">
-            <Link to={`/product-details/${data.id}`}>
+            <Link to={`/patient-details/${data.id}`}>
               <CardMedia
                 component="img"
                 height="180"
@@ -81,7 +81,7 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
           <div
             className="target-container"
             onClick={() => {
-              navigate("/product-details/" + data.id);
+              navigate("/patient-details/" + data.id);
             }}
           >
             <div className="content">
@@ -104,7 +104,7 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
           <div
             className="patient-info"
             onClick={() => {
-              navigate("/product-details/" + data.id);
+              navigate("/patient-details/" + data.id);
             }}
           >
             <div className="content">
