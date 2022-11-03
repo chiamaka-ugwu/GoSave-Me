@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./styles/details.css";
-// import circle from "../../assets/images/i-circle.png";
 import contributors from "../../assets/images/contributors.png";
 import share from "../../assets/images/share.png";
 import Button from "../button/Button";
@@ -15,9 +14,6 @@ import Box from "@mui/material/Box";
 import Modal2 from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 
-import Popover from "@mui/material/Popover";
-import Typography2 from "@mui/material/Typography";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -25,7 +21,6 @@ import {
   EmailShareButton,
   FacebookShareButton,
   LinkedinShareButton,
-  TelegramShareButton,
   TwitterShareButton,
   WhatsappShareButton,
 } from "react-share";
@@ -35,7 +30,6 @@ import {
   faFacebook,
   faTwitter,
   faWhatsapp,
-  faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -69,25 +63,25 @@ const Details = ({ data }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose2 = () => {
-    setAnchorEl(null);
-  };
-  const open2 = Boolean(anchorEl);
-  const id = open2 ? "simple-popover" : undefined;
+  // const [anchorEl, setAnchorEl] = useState(null);
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose2 = () => {
+  //   setAnchorEl(null);
+  // };
+  // const open2 = Boolean(anchorEl);
+  // const id = open2 ? "simple-popover" : undefined;
 
-  const shareFacebook = require("share-facebook");
-  const Shr = () => {
-    shareFacebook({
-      quote: "Check this library to help you create share facebook url",
-      href: "https://bukinoshita.io",
-      redirect_uri: "https://bukinoshita.io",
-      app_id: "APP_ID",
-    });
-  };
+  // const shareFacebook = require("share-facebook");
+  // const Shr = () => {
+  //   shareFacebook({
+  //     quote: "Check this library to help you create share facebook url",
+  //     href: "https://bukinoshita.io",
+  //     redirect_uri: "https://bukinoshita.io",
+  //     app_id: "APP_ID",
+  //   });
+  // };
 
   const otherImages = () => {
     return data.patientData.images.map((e) => {
@@ -263,7 +257,7 @@ const Details = ({ data }) => {
                       aria-describedby={id}
                       variant="contained"
                     /> */}
-                    <Popover
+                    {/* <Popover
                       id={id}
                       open2={open2}
                       anchorEl={anchorEl}
@@ -276,7 +270,7 @@ const Details = ({ data }) => {
                       <Typography2 sx={{ p: 2 }}>
                         The number of days left till the campaign expires
                       </Typography2>
-                    </Popover>
+                    </Popover> */}
                   </span>
                 </p>
               </div>
@@ -309,19 +303,21 @@ const Details = ({ data }) => {
             </div>
             {icons == true && (
               <div className="share-link">
-                <FontAwesomeIcon
-                  className="icon"
-                  icon={faFacebook}
-                  onClick={() => {
-                    Shr();
-                  }}
-                />
-                <FontAwesomeIcon className="icon" icon={faTwitter} />
-                <FontAwesomeIcon className="icon" icon={faInstagram} />
-                <FontAwesomeIcon className="icon" icon={faWhatsapp} />
-                <FontAwesomeIcon className="icon" icon={faLinkedin} />
-                <FontAwesomeIcon className="icon" icon={faEnvelope} />
-                <FacebookShareButton />
+                <FacebookShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                  <FontAwesomeIcon className="icon1 facebook" icon={faFacebook} />
+                </FacebookShareButton>
+                <TwitterShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                  <FontAwesomeIcon className="icon1 twitter" icon={faTwitter} />
+                </TwitterShareButton>
+                <WhatsappShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                  <FontAwesomeIcon className="icon1 whatsapp" icon={faWhatsapp} />
+                </WhatsappShareButton>
+                <LinkedinShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                  <FontAwesomeIcon className="icon1 linkedin" icon={faLinkedin} />
+                </LinkedinShareButton>
+                <EmailShareButton url={`https://go-save-me.vercel.app/product-details/${data.id}`}>
+                  <FontAwesomeIcon className="icon1 gmail" icon={faEnvelope} />
+                </EmailShareButton>
               </div>
             )}
           </div>
