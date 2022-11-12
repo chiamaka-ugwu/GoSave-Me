@@ -9,8 +9,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import Diversity1TwoToneIcon from "@mui/icons-material/Diversity1TwoTone";
-import CreditScoreTwoToneIcon from '@mui/icons-material/CreditScoreTwoTone';
-import MedicalInformationTwoToneIcon from '@mui/icons-material/MedicalInformationTwoTone';
+import CreditScoreTwoToneIcon from "@mui/icons-material/CreditScoreTwoTone";
+import MedicalInformationTwoToneIcon from "@mui/icons-material/MedicalInformationTwoTone";
 
 const Donate = () => {
   const [modal, setModal] = useState(false);
@@ -108,13 +108,13 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
+              <Typography>Why should I donate to GOSAVEME?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                We want you to be our partner in saving lifes. We need your help
+                to keep this vision alive. We use your donations to fund our
+                patients' outreach and also support Medical Research.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -133,13 +133,12 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
+              <Typography>How much can I donate?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                You can donate as much as you are capable of. We encourage
+                donors to give from their hearts.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -158,13 +157,12 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
+              <Typography>Can a donor join in the patient outreach?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                Sure! You are most welcome to join us for patient outreach or
+                Medical Research.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -185,13 +183,13 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
+              <Typography>What are the donations used for?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                You can donate to support the GOSAVEME team or you can donate to
+                support our quarterly patient outreach or you can donate to
+                support Medical Research.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -210,13 +208,13 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
+              <Typography>Can I donate to more than one cause?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                Yes, you can donate to do any or all the categories. Eg: You can
+                donate to support the GOSAVEME team, support our quarterly
+                outreach and medical research.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -235,13 +233,14 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
+              <Typography>
+                How do I verify that my donation went through?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                You can click on the contribution feature on the patient page to
+                see all the contributions made so far.
               </Typography>
             </AccordionDetails>
           </Accordion>

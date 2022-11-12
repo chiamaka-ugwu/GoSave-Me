@@ -133,6 +133,33 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
+              <Typography>What is GOSAVEME?</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                GOSAVEME is designed to be the most trusted online crowdfunding
+                website for hospital patients in need of financial assistance to
+                help them get the best of medical care to stay alive. So,
+                GOSAVEME allows people to raise money to treat very serious
+                illnesses and accidents.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            style={{
+              background: "#DFF4D7",
+              borderRadius: "10px",
+              fontSize: "14px",
+            }}
+            className="faq-box"
+          >
+            <AccordionSummary
+              expandIcon={
+                <FontAwesomeIcon icon={faAngleDown} className="arrow2" />
+              }
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
               <Typography>Who can create a GOSAVEME campaign?</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -168,6 +195,8 @@ const HowItWorks = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
+        </div>
+        <div className="right">
           <Accordion
             style={{
               background: "#DFF4D7",
@@ -193,8 +222,6 @@ const HowItWorks = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-        </div>
-        <div className="right">
           <Accordion
             style={{
               background: "#DFF4D7",
@@ -210,13 +237,13 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
+              <Typography>Can I donate to more than one patient?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                Yes please, you can. On GOSAVEME, kindness has no boundaries.
+                You can donate to save as many lives as possible. Thanks for
+                being so kind.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -235,38 +262,14 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                How do I verify that my donation went through?
               </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            style={{
-              background: "#DFF4D7",
-              borderRadius: "10px",
-              fontSize: "14px",
-            }}
-            className="faq-box"
-          >
-            <AccordionSummary
-              expandIcon={
-                <FontAwesomeIcon icon={faAngleDown} className="arrow2" />
-              }
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>Lorem ipsum dolor sit amet.</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                You can click on the contribution feature on the patient page to
+                see all the contributions made so far.
               </Typography>
             </AccordionDetails>
           </Accordion>
