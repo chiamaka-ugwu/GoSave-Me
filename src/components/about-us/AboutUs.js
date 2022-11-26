@@ -10,10 +10,7 @@ const AboutUs = () => {
         <div className="left">
           <h1>About Us</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+           GOSAVEME is designed to be the most trusted online crowdfunding website for hospital patients in need of financial assistance to help them get the best of medical care to stay alive. So, GOSAVEME allows people to raise money to treat very serious illnesses and accidents. 
           </p>
           <div className="mission">
             <div className="cont">
