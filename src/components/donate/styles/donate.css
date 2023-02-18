@@ -6,13 +6,13 @@
     background-image: url(../../../assets/images/donate.png); */
 }
 .donate-content{
-    margin-top: 0;
     padding-top: 5rem;
+    margin: auto;
+    margin-top: 0;
 }
 .large2{
     color: #F79B39 !important;
     text-align: center !important;
-    margin: auto;
 }
 .small2{
     color: #000 !important;
