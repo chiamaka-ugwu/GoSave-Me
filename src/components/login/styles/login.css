@@ -5,7 +5,7 @@
 .login .left{
     width: 40%;
     height: auto;
-    background-color: #5FC738;
+    background-color: #F79B39;
     position: absolute;
     top: 1.5rem;
     left: 30%;
@@ -37,7 +37,7 @@
     width: 100%;
 }
 input::placeholder{
-    color: #C4C4C4;
+    color: #00000080;
 }
 .login-btn-cont{
     text-align: right;
@@ -75,6 +75,7 @@ input::placeholder{
     position: relative;
 }
 .eye{
+    color: #66276D;
     position: absolute;
     top: 2.3rem;
     right: 1rem;

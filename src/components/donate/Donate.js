@@ -20,11 +20,11 @@ const Donate = () => {
     <>
       <div className="donate">
         <div className="intro donate-content">
-          <h1 className="large">We Need Your Support</h1>
-          <h2 className="small">
+          <h1 className="large large2">We Need Your Support</h1>
+          {/* <h2 className="small small2">
             You can help GoSaveMe make more impact by donating in any of these
             categories below.
-          </h2>
+          </h2> */}
         </div>
       </div>
       <div className="donate-boxes">
@@ -95,7 +95,7 @@ const Donate = () => {
         <div className="left">
           <Accordion
             style={{
-              background: "#DFF4D7",
+              background: "#B293B6",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -246,6 +246,7 @@ const Donate = () => {
           </Accordion>
         </div>
       </div>
+      
       {modal && (
         <Modal
           title={title}

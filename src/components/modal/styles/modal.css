@@ -21,7 +21,7 @@
     padding-bottom: 2rem;
 }
 .modal h3{
-    color: #5FC738;
+    color: #F79B39;
 }
 .contribution-form{
     width: 70%;
@@ -33,7 +33,7 @@
 }
 .contribution-form input, select{
     padding: 15px;
-    border: 2px solid #5FC738;
+    border: 2px solid #F79B39;
     margin-bottom: 1.5rem;
     outline: none;
 }
@@ -57,7 +57,7 @@
 }
 .money input{
     width: 40%;
-    border: 2px solid #5FC738;
+    border: 2px solid #F79B39;
     border-left: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;

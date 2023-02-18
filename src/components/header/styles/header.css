@@ -3,17 +3,18 @@
     height: 80vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url(../../../assets/images/background.jpg);
-    margin-top: -6rem;
+    background-image: url(../../../assets/images/background.png);
+    margin-top: -4rem;
+ 
 }
 .intro{
     width: 62%;
-    margin: auto;
+    margin: auto 0;
     text-align: center;
     padding: 12rem 0 0 0;
 }
 .intro .large{
-    color: #5FC738;
+    color: #A90F0F;
     margin-bottom: 1rem;
 }
 .intro .small{
@@ -39,7 +40,7 @@
 .section{
     width: 100%;
     height: auto;
-    background-color: #DFF4D7;
+    background-color: #FCDEBD;
     margin-top: 3rem;
     display: flex;
     justify-content: center;
@@ -54,14 +55,14 @@
 }
 .view-more{
     padding: 0 0 5rem 0;
-    background-color: #DFF4D7;
+    background-color: #FCDEBD;
 }
 .view-more a{
     text-decoration: none;
     float: right;
     margin-right: 6rem;
     font-size: 1rem;
-    color: #A038C7;
+    color: #66276D;
     font-weight: 600;
 }
 .how-box{
@@ -77,13 +78,8 @@
 .why-gsm{
     margin-top: 5rem;
     margin-bottom: -1rem;
-    color: #A038C7;
+    color: #66276D;
 }
-
-
-
-
-
 
 
 
@@ -91,7 +87,8 @@
     .landing-page{
         height: 62vh;
         margin-top: 0;
-        background-image: url(../../../assets/images/background.jpg);
+        /* background-image: url(../../../assets/images/background.png); */
+        background: #B293B6;
     }
     .intro{
         width: 90%;

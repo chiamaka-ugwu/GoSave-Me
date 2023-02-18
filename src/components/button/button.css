@@ -1,6 +1,6 @@
 .button, .paystack-btn{
     padding: 14px 40px;
-    background-color: #A038C7;
+    background-color: #66276D;
     border: none;
     outline: none;
     color: #fff;
@@ -8,6 +8,8 @@
     font-size: 1rem;
     border-radius: 15px;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+
 }
 .button:hover, .paystack-btn:hover{
     background-color: #a138c7b5;

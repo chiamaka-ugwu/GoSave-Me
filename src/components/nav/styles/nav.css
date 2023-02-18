@@ -24,13 +24,14 @@
     margin-left: 2.5rem;
 }
 .nav-item, .nav-item2{
-    color: #5FC738;
+    color: #F79B39;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
+    transition: 0.5s ease-in-out;
 }
 .nav-item:hover, .nav-item2:hover, .active-nav{
-    color: #A038C7;
+    color: #66276D;
 }
 .person{
     font-size: 20px;
@@ -42,19 +43,25 @@
 #menu{
     display: none;
 } 
-.none{
+.mobile{
     display: none;
 }
 .account{
     cursor: pointer;
 }
 .droplink{
-    color: #A038C7 !important;
+    color: #F79B39 !important;
     font-weight: 600 !important;
     cursor: pointer !important;
     text-decoration: none !important;
 }
+.add-patient-btn{
+    background-color: #F79B39 !important;
 
+}
+.add-patient-btn:hover{
+    background-color: #66276D !important;
+}
 
 
 @media screen and (max-width: 1000px){
@@ -81,7 +88,7 @@
         margin-left: 2rem;
         margin-top: 2rem;
     }
-    .false{
+    .desktop{
         display: none;
     }
     #menu{

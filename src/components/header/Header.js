@@ -73,7 +73,7 @@ const Header = () => {
         Save a life today
       </h3>
       <section className="section">
-        <div className="card-section">{patients()}</div>
+        <div className="card-section">{patientData && patients()}</div>
       </section>
       <div className="view-more">
         <Link to="/product">View More</Link>

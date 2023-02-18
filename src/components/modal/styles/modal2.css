@@ -22,7 +22,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
-    border: 2px solid #5FC738;
+    border: 2px solid #F79B39;
     outline: none;
     border-radius: 10px;
     margin: 1rem 0;
@@ -34,7 +34,7 @@
     align-items: baseline;
 }
 .form-btns a{
-    color: #A038C7;
+    color: #66276D;
     font-weight: 600;
     cursor: pointer;
 }

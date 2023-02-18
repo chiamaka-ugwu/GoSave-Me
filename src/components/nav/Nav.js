@@ -51,7 +51,7 @@ const Nav = ({ className, donate, works, account, id }) => {
               <img src={logo} alt="logo" />
             </Link>
           </div>
-          <ul className="nav-links false">
+          <ul className="nav-links desktop">
             <li>
               <Link
                 to="/donate"
@@ -116,12 +116,12 @@ const Nav = ({ className, donate, works, account, id }) => {
             </Menu>
             <li>
               <Link to="/add-patient" onClick={toggle}>
-                <Button btnName="Add Patient" />
+                <Button btnClass="add-patient-btn" btnName="Add Patient" />
               </Link>
             </li>
           </ul>
 
-          <ul className={isopen ? "nav-links " : "none"}>
+          <ul className={isopen ? "nav-links " : "mobile"}>
             <li>
               <Link
                 to="/donate"

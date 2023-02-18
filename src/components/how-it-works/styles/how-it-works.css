@@ -26,22 +26,25 @@
     margin: auto;
 }
 .group-text h1{
-    color: #5FC738;
+    color: #000;
+    font-size: 34px;
+    font-weight: 500;
     margin-bottom: 0.8rem;
 }
 .group-text h3{
     color: #222;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 24px;
 }
 .group2 h3{
-    color: #5FC738;
+    color: #F79B39;
     margin-bottom: 0.5rem;
 }
 .group2 p{
     font-size: 14px;
     line-height: 22px;
+    font-weight: 500;
 }
 .how-it-works .right img{
     width: 100%;
@@ -54,7 +57,7 @@
 }
 .faq-box{
     margin-bottom: 1.5rem;
-    background: #DFF4D7;
+    background: #B293B6 !important;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -62,11 +65,13 @@
     transform: rotate(180deg);
 }
 .arrow2{
-    color: #A038C7;
+    background: #F3F7D4;
+    color: #66276D;
 }
 .faq p{
     margin-bottom: 0;
-    font-size: 14px ;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 
@@ -74,10 +79,10 @@
     margin-top: 1rem;
 }
 .round-icon{
-    color: #A038C7;
-    font-size: 30px;
+    color: #66276D;
+    font-size: 35px;
     padding: 10px;
-    background: #DFF4D7;
+    background: #fff;
     border-radius: 50%;
     position: absolute;
     top: -1.2rem;
