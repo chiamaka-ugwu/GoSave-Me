@@ -43,7 +43,7 @@ const AddPatient = () => {
             ...newPatData,
             hospital: User,
           },
-          hospital:User.id
+          hospital: User.id,
         })
         .then(() => {
           setimgPrevState({
@@ -75,20 +75,20 @@ const AddPatient = () => {
             if (selectRes.data[0].status == true) {
               insert();
             } else {
-              // alert("Active Patient"); 
+              // alert("Active Patient");
               setError(true);
             }
           }
         } else {
           // alert("error occured");
-          console.log('error');
+          console.log("error");
         }
         setLoader(false);
         setAlert(true);
       })
       .catch((error) => {
         // alert("Error occured");
-        console.log('error');
+        console.log("error");
       });
   };
 
@@ -376,7 +376,19 @@ const AddPatient = () => {
                   placeholder="Amount"
                 />
               </div>
-              <select
+              <input
+                onChange={(e) => {
+                  setPatientData({
+                    ...patientData,
+                    deadline: e.target.value,
+                  });
+                }}
+                type='date'
+                value={patientData.deadline}
+                className="amount2 deadline"
+                name="deadline"
+              />
+              {/* <select
                 onChange={(e) => {
                   setPatientData({
                     ...patientData,
@@ -386,8 +398,8 @@ const AddPatient = () => {
                 value={patientData.deadline}
                 className="deadline"
                 name="deadline"
-              >
-                <option value="">Deadline</option>
+              > */}
+                {/* <option value="">Deadline</option>
                 <option value="Oct. 2022">Oct. 2022</option>
                 <option value="Nov. 2022">Nov. 2022</option>
                 <option value="Dec. 2022">Dec. 2022</option>
@@ -399,8 +411,7 @@ const AddPatient = () => {
                 <option value="June. 2023">Jun. 2023</option>
                 <option value="July. 2023">Jul. 2023</option>
                 <option value="Aug. 2023">Aug. 2023</option>
-
-              </select>
+              </select> */}
               <img src={info} className="info" alt="info" />
             </div>
             <p className="bold">Patient's next of kin details</p>

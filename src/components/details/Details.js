@@ -216,7 +216,7 @@ const Details = ({ data }) => {
           </div>
           <div className="hospital-details">
             <div className="content4">
-              <p className="bold bold2">Hospital Details</p>
+              <p className="bold bold2 hosp">Hospital Details</p>
             </div>
             <div className="content3 hospitals">
               <div className="hospital-name">

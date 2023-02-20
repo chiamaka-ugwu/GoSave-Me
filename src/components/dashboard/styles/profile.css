@@ -22,7 +22,7 @@
 }
 .logo-cont .logo{
     padding: 1rem;
-    border: 2px solid #5FC738;
+    border: 2px solid #F79B39;
     border-radius: 50%;
 }
 .logo-btns{
@@ -83,7 +83,7 @@
     outline: none;
     padding: 18px;
     border-radius: 10px;
-    border: 2px solid #5FC738;
+    border: 2px solid #F79B39;
     box-sizing: border-box;
     cursor: no-drop;
 }

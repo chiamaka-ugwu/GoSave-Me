@@ -116,7 +116,10 @@
     margin: 0.5rem;
     color: #66276D !important;
 }
-
+.hosp{
+    color: #66276D;
+    text-align: center;
+}
 
 
 
@@ -152,7 +155,14 @@
         /* background-color: red; */
         align-items: center;
     }
-    
+    .pinfo{
+        /* width: 95%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between; */
+        flex-direction: column;
+
+    }
     
 }
 
