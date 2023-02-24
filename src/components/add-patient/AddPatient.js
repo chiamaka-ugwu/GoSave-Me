@@ -11,6 +11,9 @@ import {
   faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import CircularProgress from "@mui/material/CircularProgress";
+import Popover from "@mui/material/Popover";
+import Typography from "@mui/material/Typography";
+
 
 const AddPatient = () => {
   const [patientData, setPatientData] = useState({
@@ -24,6 +27,7 @@ const AddPatient = () => {
   const [loader, setLoader] = useState(false);
   const [alert, setAlert] = useState(false);
   const [error, setError] = useState(false);
+    
 
   const addPatient = () => {
     // console.log(imgHandler);
@@ -174,6 +178,18 @@ const AddPatient = () => {
     getUser();
   });
 
+  // POPOVER
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
+
   return (
     <>
       {loader == true && (
@@ -254,6 +270,7 @@ const AddPatient = () => {
               name="illness"
               className="full-width"
               placeholder="Nature of Illness"
+              maxLength='15'
             />
             <input
               onChange={(e) => {
@@ -267,6 +284,7 @@ const AddPatient = () => {
               name="treatment"
               className="full-width"
               placeholder="Treatment Required"
+              maxLength='15'
             />
             <textarea
               onChange={(e) => {
@@ -280,6 +298,7 @@ const AddPatient = () => {
               rows="5"
               className="full-width"
               placeholder="Description of Illness"
+              maxLength='200'
             ></textarea>
             <input
               onChange={(e) => {
@@ -388,6 +407,29 @@ const AddPatient = () => {
                 className="amount2 deadline"
                 name="deadline"
               />
+              <img
+                src={info}
+                alt="info"
+                className="info"
+                onClick={handleClick}
+                aria-describedby={id}
+                variant="contained"
+              />
+              <Popover
+                style={{ zIndex: "10000" }}
+                id={id}
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+              >
+                <Typography sx={{ p: 2 }}>
+                  Deadline for funding patient treatment.
+                </Typography>
+              </Popover>
               {/* <select
                 onChange={(e) => {
                   setPatientData({
@@ -412,7 +454,6 @@ const AddPatient = () => {
                 <option value="July. 2023">Jul. 2023</option>
                 <option value="Aug. 2023">Aug. 2023</option>
               </select> */}
-              <img src={info} className="info" alt="info" />
             </div>
             <p className="bold">Patient's next of kin details</p>
             <input

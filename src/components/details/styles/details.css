@@ -114,15 +114,16 @@
 .icon1{
     font-size: 20px;
     margin: 0.5rem;
-    color: #66276D !important;
+    color: #66276d !important;
 }
 .hosp{
     color: #66276D;
     text-align: center;
 }
-
-
-
+.small3{
+    color: #fff !important;
+    margin-bottom: 0.5rem;
+}
 
 
 

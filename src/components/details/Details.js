@@ -177,14 +177,14 @@ const Details = ({ data }) => {
           <div className="target-container2">
             <div className="content3">
               <div className="target">
-                <p className="small small2">Target</p>
+                <p className="small small3">Target</p>
                 <p className="bold bold2">
                   {data.patientData.currency}
                   {data.patientData.amount}
                 </p>
               </div>
               <div className="amount-raised">
-                <p className="small small2">Amount Raised</p>
+                <p className="small small3">Amount Raised</p>
                 <p className="bold bold2">
                   {data.patientData.currency}
                   {data.amount_raised}

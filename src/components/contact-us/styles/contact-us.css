@@ -24,7 +24,7 @@
     width: 47%;
 }
 .contact-us .right h1{
-    color: #5FC738;
+    color: #F79B39;
     font-size: 32px;   
     margin-bottom: 0.5rem;
 }
@@ -33,7 +33,7 @@
 }
 .contact-us input{
     padding: 18px;
-    border: 2px solid #5FC738;
+    border: 2px solid #F79B39;
     border-radius: 10px;
     margin-bottom: 1.5rem;
     outline: none;
@@ -53,14 +53,14 @@
 }
 .contact-links .icon{
     font-size: 30px;
-    color: #A038C7;
+    color: #66276d;
 }
 .icon2{
     font-size: 25px;
-    color: #A038C7;
+    color: #66276d;
 }
 .icon:hover, .icon2:hover{
-    color: #5FC738;
+    color: #F79B39;
 }
 
 
