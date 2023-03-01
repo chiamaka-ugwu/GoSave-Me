@@ -153,7 +153,6 @@
         margin-bottom: 1rem;
     }
     .content5{
-        /* background-color: red; */
         align-items: center;
     }
     .pinfo{
@@ -164,9 +163,11 @@
         flex-direction: column;
 
     }
-    .contributors, .share, .card-footer-btn{
-        width: fit-content !important;
+    .contributors:active .content5, 
+    .share:active .content5, 
+    .card-footer-btn:active .content5{
         outline: none !important;
+        background: none;
     }
     
 }
