@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/GoSave Me.png";
+import logo from "../../assets/images/gosaveme.png";
 import { Link } from "react-router-dom";
 import './styles/nav2.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

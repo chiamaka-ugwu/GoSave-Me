@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/footer.css';
-import logo from '../../assets/images/GoSave Me.png';
+import logo from '../../assets/images/gosaveme.png';
 import { Link } from 'react-router-dom';
 
 

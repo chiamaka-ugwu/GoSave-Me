@@ -9,6 +9,10 @@ footer{
 }
 .logo2{
     margin-left: 6rem;
+    width: 15%;
+}
+.logo2 img{
+    width: 100%;
 }
 .links2{
     height: 5rem;
@@ -24,6 +28,7 @@ footer{
 .links2 ul li a{
     text-decoration: none;
     color: #fff;
+    transition: 0.5s ease-in-out;
 }
 .links2 ul li a:hover{
     color: #F79B39;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles/nav.css";
-import logo from "../../assets/images/GoSave Me.png";
+import logo from "../../assets/images/gosaveme.png";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../button/Button";
 import Menu from "@mui/material/Menu";

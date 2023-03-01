@@ -164,6 +164,10 @@
         flex-direction: column;
 
     }
+    .contributors, .share, .card-footer-btn{
+        width: fit-content !important;
+        outline: none !important;
+    }
     
 }
 
