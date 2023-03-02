@@ -36,10 +36,10 @@ const ContactUs = () => {
           setAlert(true);
           setContactData({
             ...contactData,
-            name:'',
-            lastName:'',
-            email:'',
-            message:''
+            name: "",
+            lastName: "",
+            email: "",
+            message: "",
           });
         }
       })
@@ -66,11 +66,13 @@ const ContactUs = () => {
             <img src={contact} alt="contact" />
           </div>
           <div className="contact-links">
-            <a href="">
+            <a className="tel-link" href="tel:+2347066087325">
               <FontAwesomeIcon className="icon" icon={faWhatsapp} />
+              <span class="tel">+234 706 608 7325</span>
             </a>
-            <a href="">
+            <a className="tel-link" href="https://wa.me/+2347034100741">
               <FontAwesomeIcon className="icon2" icon={faPhone} />
+              <span class="tel">+234 703 410 0741</span>
             </a>
           </div>
         </div>

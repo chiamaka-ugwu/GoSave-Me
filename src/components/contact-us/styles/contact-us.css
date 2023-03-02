@@ -58,9 +58,13 @@
 .icon2{
     font-size: 25px;
     color: #66276d;
+    transition: 0.5s ease-in-out;
 }
 .icon:hover, .icon2:hover{
     color: #F79B39;
+}
+.tel{
+    display: none;
 }
 
 
@@ -72,10 +76,33 @@
         width: 95%;
         margin: auto;
     }
-    .contact-us .left{
+    .contact-img{
         display: none;
     }
-
-    
+    .contact-us .left{
+        width: 95%;
+        margin: auto;
+    } 
+    .contact-links{
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin-top: 4rem;
+    }
+    .tel{
+        display: block;
+        color: #66276d;
+        transition: 0.5s ease-in-out;
+        font-weight: 600;
+    }
+    .tel:hover{
+        color: #F79B39;
+    }
+    .tel-link{
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        gap: 10px;
+    }
 
 }
