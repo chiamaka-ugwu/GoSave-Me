@@ -9,11 +9,19 @@ import notice from "../../assets/images/notice.png";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
 
-const Modal = ({ setModal, patient, donate, donate_type, title }) => {
+import Contributors from "./Contributors";
+
+import { useNavigate } from "react-router-dom";
+
+const Modal = ({ setModal, patient, donate, donate_type, title, data }) => {
   const [checked, setChecked] = useState(true);
 
-  const [alert, setAlert] = useState(false);
+  const [alert, setAlert] = useState(true);
   const [error, setError] = useState(false);
+
+  const [contModal, setContModal] = useState(false);
+
+  const navigate = useNavigate()
 
 
   const handleChange = (event) => {
@@ -56,7 +64,9 @@ const Modal = ({ setModal, patient, donate, donate_type, title }) => {
           .from("hospital")
           .update({ wallet: new_wallet })
           .eq("email", hospital_email)
-          .then((res) => {});
+          .then((res) => {
+
+          });
       })
       .catch((error) => {
         console.log(error);
@@ -79,8 +89,9 @@ const Modal = ({ setModal, patient, donate, donate_type, title }) => {
           updatePatientAmountRaised();
           updateHospitalWallet();
           console.log(res);
-          setModal(false);
           setAlert(true);
+          setModal(false);
+          // setAlert(true);
         })
         .catch((error) => {
           alert(error);
@@ -97,8 +108,11 @@ const Modal = ({ setModal, patient, donate, donate_type, title }) => {
           metadata: { ...contribution, reference, type: donate_type },
         })
         .then((res) => {
-          setModal(false);
-          // setAlert(true);
+          // setModal(false);
+          setAlert(true);
+          // setModal(false);
+          // setContModal(true);
+
         })
         .catch((error) => {
           alert(error);
@@ -109,6 +123,8 @@ const Modal = ({ setModal, patient, donate, donate_type, title }) => {
   };
 
   //  ALERT
+
+
 
   //   PAYSTACK
   const config = {
@@ -122,10 +138,17 @@ const Modal = ({ setModal, patient, donate, donate_type, title }) => {
     // Implementation for whatever you want to do with reference and after success call.
     console.log(reference);
     addContributor(reference);
+    // setAlert(true);
+    // setContModal(true);
+    navigate('/alert');
+    
   };
 
   const handlePaystackCloseAction = () => {
     // implementation for  whatever you want to do when the Paystack dialog closed.
+    setModal(false);
+    // setAlert(true);
+    // setContModal(true);
     console.log("closed");
   };
 
@@ -151,13 +174,12 @@ const Modal = ({ setModal, patient, donate, donate_type, title }) => {
     <>
       {alert && (
         <Alert
-          msg="Success"
-          setAlert={setAlert}
-          alert={alert}
-          icon={faCircleCheck}
           msgColor="green"
           iconColor="green"
+          msg="Payment Received!"
+          setAlert={setAlert}
           setError={setError}
+          icon={faCircleCheck}
         />
       )}
       {console.log(patient)}
@@ -333,6 +355,9 @@ const Modal = ({ setModal, patient, donate, donate_type, title }) => {
           </form>
         </div>
       </div>
+
+      {contModal && <Contributors data={data} setContModal={setContModal} />}
+ 
     </>
   );
 };

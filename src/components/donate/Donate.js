@@ -11,13 +11,26 @@ import Typography from "@mui/material/Typography";
 import Diversity1TwoToneIcon from "@mui/icons-material/Diversity1TwoTone";
 import CreditScoreTwoToneIcon from "@mui/icons-material/CreditScoreTwoTone";
 import MedicalInformationTwoToneIcon from "@mui/icons-material/MedicalInformationTwoTone";
+import Alert from "../../components/modal/Alert";
 
 const Donate = () => {
   const [modal, setModal] = useState(false);
   const [donate_type, setdonate_type] = useState("");
   const [title, setTitle] = useState("");
+  const [alert, setAlert] = useState(false);
+
   return (
     <>
+      {/* {alert && (
+        <Alert
+          msgColor="green"
+          iconColor="green"
+          msg="Payment Received!"
+          setAlert={setAlert}
+          setError={setError}
+          icon={faCircleCheck}
+        />
+      )} */}
       <div className="donate">
         <div className="intro donate-content">
           <h1 className="large large2">We Need Your Support</h1>
@@ -246,7 +259,7 @@ const Donate = () => {
           </Accordion>
         </div>
       </div>
-      
+
       {modal && (
         <Modal
           title={title}

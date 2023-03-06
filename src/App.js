@@ -12,6 +12,7 @@ import AdminDashboardPage from "./pages/AdminDashboardPage";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import AlertPage from "./pages/AlertPage";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                     <Route path="/how-it-works" element={<HowItWorksPage />} />
                     <Route path="/contact-us" element={<ContactUsPage />} />
                     <Route path="/about-us" element={<AboutUsPage />} />
+                    <Route path="/alert" element={<AlertPage />} />
                 </Routes>
             </Router>
         </>

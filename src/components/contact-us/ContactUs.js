@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./styles/contact-us.css";
 import contact from "../../assets/images/contact.png";
 import Button from "../button/Button";
-import whatsapp from "../../assets/images/whatsapp.png";
-import phone from "../../assets/images/phone.png";
 import supabase from "../../config/supabase";
 import Alert from "../../components/modal/Alert";
 import {

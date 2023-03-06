@@ -37,8 +37,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Details = ({ data }) => {
   const [modal, setModal] = useState(false);
   const [alert, setAlert] = useState(false);
-  const baseURL =
-    "https://jsqckivnjimadtyuxblt.supabase.co/storage/v1/object/public/";
+  const baseURL = "https://jsqckivnjimadtyuxblt.supabase.co/storage/v1/object/public/";
+  
   const [contModal, setContModal] = useState(false);
 
   const style = {
@@ -98,7 +98,13 @@ const Details = ({ data }) => {
     <>
       {/* {console.log(data)} */}
       {alert == true && (
-        <Alert msg="Success" setAlert={setAlert} icon={faCircleCheck} />
+        <Alert
+         msg="Success" 
+         setAlert={setAlert} 
+         icon={faCircleCheck} 
+         msgColor='green'
+         iconColor='green'
+        />
       )}
       <div className="card-details">
         <div className="details-content">
@@ -177,7 +183,7 @@ const Details = ({ data }) => {
           <div className="target-container2">
             <div className="content3">
               <div className="target">
-                <p className="small small3">Target</p>
+                <p className="small small3">Target Amount</p>
                 <p className="bold bold2">
                   {data.patientData.currency}
                   {data.patientData.amount}

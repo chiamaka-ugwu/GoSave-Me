@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-image: url(../../../assets/images/background.png);
     margin-top: -5rem;
- 
+ /* background-color: red; */
 }
 .intro{
     width: 62%;
@@ -27,7 +27,7 @@
 .btn-container{
     width: 57%;
     margin: auto;
-    margin-top: 7rem;
+    margin-top: 8rem;
 }
 .save-btn{
     float: right;
