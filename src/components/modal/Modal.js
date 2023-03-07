@@ -13,7 +13,7 @@ import Contributors from "./Contributors";
 
 import { useNavigate } from "react-router-dom";
 
-const Modal = ({ setModal, patient, donate, donate_type, title, data }) => {
+const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget }) => {
   const [checked, setChecked] = useState(true);
 
   const [alert, setAlert] = useState(true);
@@ -140,7 +140,10 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data }) => {
     addContributor(reference);
     // setAlert(true);
     // setContModal(true);
+    setModal(false);
+    setTarget(false);
     navigate('/alert');
+
     
   };
 

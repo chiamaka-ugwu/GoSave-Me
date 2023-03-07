@@ -36,6 +36,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import TargetReached from "../modal/TargetReached";
 
 const Details = ({ data }) => {
+  // console.log(data.patientData.amount);
+  // console.log(data.amount_raised)
   const [target, setTarget] = useState(false);
   const [modal, setModal] = useState(false);
   const [alert, setAlert] = useState(false);
@@ -43,6 +45,25 @@ const Details = ({ data }) => {
     "https://jsqckivnjimadtyuxblt.supabase.co/storage/v1/object/public/";
 
   const [contModal, setContModal] = useState(false);
+
+
+  const isTarget = () => {
+      if(data.amount_raised > data.patientData.amount) {
+        setTarget(true)
+      }
+      else{
+        setModal(true)
+      }
+    }
+  
+
+
+
+
+
+
+
+
 
   const style = {
     position: "absolute",
@@ -306,7 +327,9 @@ const Details = ({ data }) => {
               </div>
               <Button
                 btnName="Save My Life"
-                onClick={() => setModal(true)}
+                onClick={() => 
+                  isTarget()
+                  }
                 btnClass="card-footer-btn"
               />
             </div>
@@ -360,13 +383,13 @@ const Details = ({ data }) => {
         />
       )}
       {contModal && <Contributors data={data} setContModal={setContModal} />}
-      {target && <TargetReached  setModal={setModal} />}
+      {target && <TargetReached  setModal={setModal} setTarget={setTarget} />}
 
-      <a
+      {/* <a
         onClick={() => setTarget(true)}
       >
         Target
-      </a>
+      </a> */}
     </>
   );
 

@@ -1,0 +1,13 @@
+.yes-cont{
+    margin-top: 5rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.yes-cont .cancel{
+    color: #66276d;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
