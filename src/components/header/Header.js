@@ -68,7 +68,6 @@ const Header = () => {
           </a>
         </div>
       </header>
-      <Link to='/alert'>Alert</Link>
       <SearchBar />
       <h3 className="save" id="save">
         Save a life today

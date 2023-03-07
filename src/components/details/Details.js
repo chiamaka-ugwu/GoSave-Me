@@ -33,12 +33,15 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import TargetReached from "../modal/TargetReached";
 
 const Details = ({ data }) => {
+  const [target, setTarget] = useState(false);
   const [modal, setModal] = useState(false);
   const [alert, setAlert] = useState(false);
-  const baseURL = "https://jsqckivnjimadtyuxblt.supabase.co/storage/v1/object/public/";
-  
+  const baseURL =
+    "https://jsqckivnjimadtyuxblt.supabase.co/storage/v1/object/public/";
+
   const [contModal, setContModal] = useState(false);
 
   const style = {
@@ -99,11 +102,11 @@ const Details = ({ data }) => {
       {/* {console.log(data)} */}
       {alert == true && (
         <Alert
-         msg="Success" 
-         setAlert={setAlert} 
-         icon={faCircleCheck} 
-         msgColor='green'
-         iconColor='green'
+          msg="Success"
+          setAlert={setAlert}
+          icon={faCircleCheck}
+          msgColor="green"
+          iconColor="green"
         />
       )}
       <div className="card-details">
@@ -309,19 +312,38 @@ const Details = ({ data }) => {
             </div>
             {icons == true && (
               <div className="share-link">
-                <FacebookShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
-                  <FontAwesomeIcon className="icon1 facebook" icon={faFacebook} />
+                <FacebookShareButton
+                  url={`https://go-save-me.vercel.app/patient-details/${data.id}`}
+                >
+                  <FontAwesomeIcon
+                    className="icon1 facebook"
+                    icon={faFacebook}
+                  />
                 </FacebookShareButton>
-                <TwitterShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
+                <TwitterShareButton
+                  url={`https://go-save-me.vercel.app/patient-details/${data.id}`}
+                >
                   <FontAwesomeIcon className="icon1 twitter" icon={faTwitter} />
                 </TwitterShareButton>
-                <WhatsappShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
-                  <FontAwesomeIcon className="icon1 whatsapp" icon={faWhatsapp} />
+                <WhatsappShareButton
+                  url={`https://go-save-me.vercel.app/patient-details/${data.id}`}
+                >
+                  <FontAwesomeIcon
+                    className="icon1 whatsapp"
+                    icon={faWhatsapp}
+                  />
                 </WhatsappShareButton>
-                <LinkedinShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
-                  <FontAwesomeIcon className="icon1 linkedin" icon={faLinkedin} />
+                <LinkedinShareButton
+                  url={`https://go-save-me.vercel.app/patient-details/${data.id}`}
+                >
+                  <FontAwesomeIcon
+                    className="icon1 linkedin"
+                    icon={faLinkedin}
+                  />
                 </LinkedinShareButton>
-                <EmailShareButton url={`https://go-save-me.vercel.app/patient-details/${data.id}`}>
+                <EmailShareButton
+                  url={`https://go-save-me.vercel.app/patient-details/${data.id}`}
+                >
                   <FontAwesomeIcon className="icon1 gmail" icon={faEnvelope} />
                 </EmailShareButton>
               </div>
@@ -338,8 +360,16 @@ const Details = ({ data }) => {
         />
       )}
       {contModal && <Contributors data={data} setContModal={setContModal} />}
+      {target && <TargetReached  setModal={setModal} />}
+
+      <a
+        onClick={() => setTarget(true)}
+      >
+        Target
+      </a>
     </>
   );
+
 };
 
 export default Details;
