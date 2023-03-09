@@ -4,7 +4,7 @@ import Button from "../button/Button";
 import Modal from "./Modal";
 import './styles/target.css';
 
-const TargetReached = ({ setTarget,data, setAlert}) => {
+const TargetReached = ({ setTarget, data, setAlert}) => {
   const [modal, setModal] = useState(false);
   const setModals = () => {
     setModal(true);
@@ -34,14 +34,16 @@ const TargetReached = ({ setTarget,data, setAlert}) => {
           </div>
         </div>
       </div>
-      {modal && (
+      {modal && <>
+        {console.log(data)}
         <Modal
           title="Contribute To Save A Life"
           setModal={setModal}
           patient={data}
           setAlert={setAlert}
         />
-      )}
+      </>
+      }
     </>
   );
 };

@@ -48,7 +48,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     fetch();
-  });
+  }, []);
 
   const Location_patients = () => {
     return location.map((e) => {

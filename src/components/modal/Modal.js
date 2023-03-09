@@ -143,7 +143,7 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget 
     setModal(false);
     setTarget(false);
     navigate('/alert');
-
+    console.log("Done");
     
   };
 
