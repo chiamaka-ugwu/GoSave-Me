@@ -34,12 +34,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import TargetReached from "../modal/TargetReached";
+import { CircularProgress } from "@mui/material";
 
 const Details = ({ data }) => {
   console.log(data.patientData.amount);
   console.log(data.amount_raised);
 
-
+  const [checked, setChecked] = useState(true);
+  const [loading, setloader] = useState(false);
   const [target, setTarget] = useState(false);
   const [modal, setModal] = useState(false);
   const [alert, setAlert] = useState(false);
@@ -49,7 +51,7 @@ const Details = ({ data }) => {
   const [contModal, setContModal] = useState(false);
 
   const isTarget = () => {
-    if ( parseInt(data.amount_raised) > parseInt(data.patientData.amount) ) {
+    if (parseInt(data.amount_raised) > parseInt(data.patientData.amount)) {
       setTarget(true);
     } else {
       setModal(true);
@@ -111,6 +113,17 @@ const Details = ({ data }) => {
   };
   return (
     <>
+
+      {loading == true &&
+        <>
+          {console.log("loading")}
+          <div className="modal" style={{ color: "#fff" }}>
+            <CircularProgress color="inherit" />
+          </div>
+        </>
+      }
+
+
       {/* {console.log(data)} */}
       {alert == true && (
         <Alert
@@ -370,10 +383,11 @@ const Details = ({ data }) => {
           patient={data}
           setAlert={setAlert}
           setTarget={setTarget}
+          setloader={setloader}
         />
       )}
       {contModal && <Contributors data={data} setContModal={setContModal} />}
-      {target && <TargetReached data={data}  setModal={setModal} setTarget={setTarget} />}
+      {target && <TargetReached data={data} setModal={setModal} setTarget={setTarget} />}
 
       {/* <a
         onClick={() => setTarget(true)}
