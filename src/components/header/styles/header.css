@@ -1,129 +1,133 @@
-.landing-page{
-    width: 100%;
-    height: 80vh;
-    background-size: 100% 120%;
-    background-repeat: no-repeat;
-    background-image: url(../../../assets/images/background.png);
-    margin-top: -5rem;
- /* background-color: red; */
+.landing-page {
+  width: 100%;
+  height: 85vh;
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/images/background.png);
+  margin-top: -5rem;
+  /* background-color: red; */
 }
-.intro{
-    width: 62%;
-    margin: auto 0;
-    text-align: center;
-    padding: 12rem 0 0 0;
+.intro {
+  width: 62%;
+  margin: auto 0;
+  text-align: center;
+  padding: 12rem 0 0 0;
 }
-.intro .large{
-    color: #A90F0F;
-    margin-bottom: 1rem;
+.intro .large {
+  color: #a90f0f;
+  margin-bottom: 1rem;
 }
-.intro .small{
-    width: 90%;
-    margin: auto;
-    color: #fff;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+.intro .small {
+  width: 90%;
+  margin: auto;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
-.btn-container{
-    width: 57%;
-    margin: auto;
-    margin-top: 8rem;
+.btn-container {
+  width: 57%;
+  margin: auto;
+  margin-top: 9rem;
 }
-.save-btn{
-    float: right;
+.save-btn {
+  float: right;
 }
-.save{
-    font-size: 1.25rem;
-    margin: 2rem 0 0 5rem;
-    color: #222;
+.save {
+  font-size: 1.25rem;
+  margin: 2rem 0 0 5rem;
+  color: #222;
 }
-.section{
-    width: 100%;
-    height: auto;
-    background-color: #FCDEBD;
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0;
+.section {
+  width: 100%;
+  height: auto;
+  background-color: #fcdebd;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
 }
-.card-section{
-    width: 90%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: left;
-    margin-left: 6rem;
+.card-section {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  margin-left: 6rem;
 }
-.view-more{
-    padding: 0 0 5rem 0;
-    background-color: #FCDEBD;
+.view-more {
+  padding: 0 0 5rem 0;
+  background-color: #fcdebd;
 }
-.view-more a{
-    text-decoration: none;
-    float: right;
-    margin-right: 6rem;
-    font-size: 1rem;
-    color: #66276D;
-    font-weight: 600;
+.view-more a {
+  text-decoration: none;
+  float: right;
+  margin-right: 6rem;
+  font-size: 1rem;
+  color: #66276d;
+  font-weight: 600;
 }
-.how-box{
-    background: none !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    position: relative;
+.how-box {
+  background: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  position: relative;
 }
-.how-box h3{
-    margin-top: 0.5rem;
-}
-
-.why-gsm{
-    margin-top: 5rem;
-    margin-bottom: -1rem;
-    color: #66276D;
+.how-box h3 {
+  margin-top: 0.5rem;
 }
 
-
+.why-gsm {
+  margin-top: 5rem;
+  margin-bottom: -1rem;
+  color: #66276d;
+}
 
 @media screen and (max-width: 1000px) {
-    .landing-page{
-        height: 62vh;
-        margin-top: 0;
-        /* background-image: url(../../../assets/images/background.png); */
-        background: #B293B6;
-    }
-    .intro{
-        width: 90%;
-        margin: auto;
-        text-align: center;
-        padding: 6rem 0 0 0;
-    }
-    .btn-container{
-        width: fit-content;
-        margin: auto;
-        margin-top: 3rem;
-    }
-    .save{
-        font-size: 1.1rem;
-        margin: 3rem 0 0 1rem;
-    }
-    .card-section{
-        flex-flow: column wrap;
-        margin-top: 2rem;
-        padding: 1rem 0;
-        margin-left: 0;
-    }
-    .view-more a{
-        margin-right: 1.5rem;
-    }
-    
-    
-    
-
-
-
-
-
-
-
-
-    
+  .landing-page {
+    height: 70vh;
+    margin-top: 0;
+    background-image: url(../../../assets/images/bg.jpg);
+    /* background: #B293B6; */
+    background-size: 100% 100%;
+    /* filter: blur(2px); */
+    /* position: relative; */
+  }
+   /* .blur { */
+    /* background: #22222298; */
+    /* background: red; */
+    /* height: 65vh; */
+    /* position: absolute; */
+    /* top: 0; */
+  /* } */
+  .intro {
+    /* position: absolute; */
+    /* top: 6rem; */
+    width: 90%;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    padding: 9rem 0 0 0;
+  }
+  .intro .large {
+    color: #b293b6;
+    /* color: #F79B39; */
+    margin-bottom: 1rem;
+  }
+  .btn-container {
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+  }
+  .save {
+    font-size: 1.1rem;
+    margin: 3rem 0 0 1rem;
+  }
+  .card-section {
+    flex-flow: column wrap;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    margin-left: 0;
+  }
+  .view-more a {
+    margin-right: 1.5rem;
+  }
 }

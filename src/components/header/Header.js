@@ -54,6 +54,7 @@ const Header = () => {
       )}
 
       <header className="landing-page">
+        <div className="blur"></div>
         <div className="intro">
           <h1 className="large">
             Join Millions of Kind-Hearted Individuals to save dying patients.

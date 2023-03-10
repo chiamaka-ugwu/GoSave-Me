@@ -9,8 +9,10 @@
     margin-bottom: 3rem;
 }
 .prod-right h4{
-    margin-left: 5.5rem;
-    margin-top: 2rem;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+
 }
 .prod-right2{
     display: flex;
@@ -42,7 +44,6 @@ article{
         margin: auto;
     }
     .prod-right h4{
-        margin-left: 0;
         text-align: center;
     }
     article{

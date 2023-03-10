@@ -102,7 +102,7 @@ const ProductDetails = () => {
           )}
         </div>
         <div className="prod-right">
-          <SearchBar container="search-right" bar="bar2 bar3" btn="sub-btn" />
+          <SearchBar container="search-right" bar="bar bar2 bar3" btn="sub-btn" />
           <div className="prod-right2">
             {/* <h4>Patients with similar illness</h4>
             <article>

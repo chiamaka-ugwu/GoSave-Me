@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 .active-btn, .btn:hover{
-    background-color: #5FC738;
+    background-color: #F79B39;
     color: #fff;
 }
 

@@ -1,12 +1,12 @@
 .input-container{
-    width: 100%;
+    width: 45%;
     display: flex;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 3rem auto;
     position: relative;
 }
 .search-bar{
-    width: 45%;
+    width: 100%;
     padding: 20px;
     outline: none;
     font-size: 1rem;
@@ -33,7 +33,7 @@
     color: #fff;
     font-size: 1rem;
     bottom: 0.8rem;
-    right: 24rem;
+    right: 0.5rem;
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
@@ -42,31 +42,19 @@
 }
 
 
-/* PRODUCT PAGE */
-.search-right{
-    justify-content: right;
-    margin-top: 3rem;
-    margin-bottom: 0;
-}
-.bar{
-    margin-right: 6rem;
-    width: 40%;
-}
-.sub-btn{
-    right: 7rem;
-}
-
 
 /* PRODUCT DETAILS PAGE */
-.bar2{
-    margin-right: 6rem;
-    width: 70%;
+.search-right{
+    width: 80%;
 }
 
 
 @media screen and (max-width:1000px){
-    .search-bar{
+    .input-container{
         width: 85%;
+    }
+    .search-bar{
+        width: 100%;
         padding: 20px 10px;
     }
     .search-bar::placeholder{
@@ -78,24 +66,9 @@
         padding: 10px 10px 10px 30px;
         border-radius: 20px;
         bottom: 0.8rem;
-        right: 2.5rem;
         font-size: 0.9rem;
     }
-
-
-    /* PRODUCT PAGE MOBILE */
     .search-right{
-        justify-content: unset;
-        margin-top: 3rem;
-        margin-bottom: 0;
+       display: none;
     }
-    .bar{
-        width: 85%;
-        margin: auto;
-    }
-    .sub-btn{
-        right: 2.5rem;
-    }
-
-    
 }
