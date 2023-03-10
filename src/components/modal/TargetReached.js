@@ -41,6 +41,7 @@ const TargetReached = ({ setTarget, data, setAlert}) => {
           setModal={setModal}
           patient={data}
           setAlert={setAlert}
+          setTarget={setTarget}
         />
       </>
       }

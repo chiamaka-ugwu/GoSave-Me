@@ -12,10 +12,11 @@ import Typography from "@mui/material/Typography";
 import Contributors from "./Contributors";
 
 import { useNavigate } from "react-router-dom";
+import { Button, CircularProgress } from "@mui/material";
 
 const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget }) => {
   const [checked, setChecked] = useState(true);
-
+  const [loading, setloader] = useState(false);
   const [alert, setAlert] = useState(true);
   const [error, setError] = useState(false);
 
@@ -43,7 +44,7 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget 
       .from("patients")
       .update({ amount_raised: new_wallet })
       .eq("id", patient.id)
-      .then((res) => {});
+      .then((res) => { });
   };
 
   const updateHospitalWallet = () => {
@@ -74,6 +75,10 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget 
   };
 
   const addContributor = (reference) => {
+    // setAlert(false);
+    // setModal(false);
+    // setTarget(false);
+    setloader(true)
     const post = (table) => {
       supabse_conn
         .from(table)
@@ -88,13 +93,11 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget 
         .then((res) => {
           updatePatientAmountRaised();
           updateHospitalWallet();
-          console.log(res);
-          setAlert(true);
-          setModal(false);
-          // setAlert(true);
+          navigate('/alert');
         })
         .catch((error) => {
-          alert(error);
+          setAlert(error);
+          console.log(error)
         });
     };
     if (donate && donate == true) {
@@ -136,15 +139,10 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget 
 
   const handlePaystackSuccessAction = (reference) => {
     // Implementation for whatever you want to do with reference and after success call.
-    console.log(reference);
+    // console.log(reference);
+
     addContributor(reference);
-    // setAlert(true);
-    // setContModal(true);
-    setModal(false);
-    setTarget(false);
-    navigate('/alert');
-    console.log("Done");
-    
+
   };
 
   const handlePaystackCloseAction = () => {
@@ -175,6 +173,13 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget 
 
   return (
     <>
+      {loading == false &&
+        <>
+          <div className="modal" style={{ color: "#fff" }}>
+            <CircularProgress color="inherit" />
+          </div>
+        </>
+      }
       {alert && (
         <Alert
           msgColor="green"
@@ -350,17 +355,21 @@ const Modal = ({ setModal, patient, donate, donate_type, title, data, setTarget 
               btnClass="form-submit1"
             /> */}
 
-            <PaystackButton
-              {...componentProps}
-              className="paystack-btn"
-              text="Donate"
-            />
+            {loading == true ? <>
+              <CircularProgress color="inherit" />
+            </> : <>
+              <PaystackButton
+                {...componentProps}
+                className="paystack-btn"
+                text="Donate"
+              />
+            </>}
           </form>
         </div>
       </div>
 
       {contModal && <Contributors data={data} setContModal={setContModal} />}
- 
+
     </>
   );
 };
