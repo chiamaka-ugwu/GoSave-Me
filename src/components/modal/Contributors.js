@@ -1,4 +1,9 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faClose
+} from "@fortawesome/free-solid-svg-icons";
+
 
 const Contributors = ({ setContModal, data }) => {
   console.log(data);
@@ -27,9 +32,9 @@ const Contributors = ({ setContModal, data }) => {
               </div>
             </div>
             <div className="form-btns form-btns7">
-              <a className="cont-cancel" onClick={() => setContModal(false)}>
+              {/* <a className="cont-cancel" onClick={() => setContModal(false)}>
                 Cancel
-              </a>
+              </a> */}
             </div>
           </div>
         </>
@@ -43,6 +48,7 @@ const Contributors = ({ setContModal, data }) => {
           className="modal-box modal-box2 cont-box"
           onClick={(e) => e.stopPropagation()}
         >
+          <FontAwesomeIcon icon={faClose} onClick={() => setContModal(false)} className="close" />
           <h3 className="cont-h3">Contributors</h3>
           {contributors()}
         </div>

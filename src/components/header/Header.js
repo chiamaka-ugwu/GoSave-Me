@@ -77,7 +77,7 @@ const Header = () => {
         <div className="card-section">{patientData && patients()}</div>
       </section>
       <div className="view-more">
-        <Link to="/product">View More</Link>
+        <Link to="/patients">View More</Link>
       </div>
 
 

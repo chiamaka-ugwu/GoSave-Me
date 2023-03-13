@@ -74,7 +74,15 @@
 .form-submit1{
     width: 100%;
 }
-
+.close{
+    color: gray;
+    padding: 5px;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    border: 1px solid #F79B39;
+    cursor: pointer;
+}
 
 
 /* CONTRIBUTORS MODAL */
