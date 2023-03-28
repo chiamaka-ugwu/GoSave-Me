@@ -1,40 +1,46 @@
-.landing-page {
+header {
   width: 100%;
-  height: 85vh;
-  background-size: 100% 120%;
-  background-repeat: no-repeat;
-  background-image: url(../../../assets/images/background.png);
-  margin-top: -5rem;
-  /* background-color: red; */
+  height: 100vh;
+  background: rgb(178, 147, 182);
+  /* background: #fcdebd; */
+}
+
+.landing-page {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+.landing-page .left,
+.landing-page .right {
+  width: 49%;
+}
+.landing-page .right img {
+  width: 100%;
+  border-radius: 100px 100px 0 100px;
 }
 .intro {
-  width: 62%;
-  margin: auto 0;
-  text-align: center;
-  padding: 12rem 0 0 0;
+  padding: 2rem 0 0 0;
 }
 .intro .large {
-  color: #a90f0f;
-  margin-bottom: 1rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+  font-size: 40px;
 }
 .intro .small {
-  width: 90%;
-  margin: auto;
+  width: 80%;
   color: #fff;
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 .btn-container {
-  width: 57%;
-  margin: auto;
-  margin-top: 9rem;
+  margin-top: 4rem;
 }
-.save-btn {
-  float: right;
-}
+
 .save {
   font-size: 1.25rem;
-  margin: 2rem 0 0 5rem;
+  margin: 2rem 0 0 7.5%;
   color: #222;
 }
 .section {
@@ -83,44 +89,43 @@
 
 @media screen and (max-width: 1000px) {
   .landing-page {
-    height: 70vh;
-    margin-top: 0;
-    background-image: url(../../../assets/images/bg.jpg);
-    /* background: #B293B6; */
-    background-size: 100% 100%;
-    /* filter: blur(2px); */
-    /* position: relative; */
-  }
-   /* .blur { */
-    /* background: #22222298; */
-    /* background: red; */
-    /* height: 65vh; */
-    /* position: absolute; */
-    /* top: 0; */
-  /* } */
-  .intro {
-    /* position: absolute; */
-    /* top: 6rem; */
-    width: 90%;
-    text-align: center;
+    height: 100vh;
+    flex-direction: column;
     padding: 0;
-    margin: auto;
-    padding: 9rem 0 0 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .landing-page .left,
+  .landing-page .right {
+    width: 100%;
+  }
+  .intro {
+    text-align: center;
   }
   .intro .large {
-    color: #b293b6;
-    /* color: #F79B39; */
-    margin-bottom: 1rem;
+    font-size: 30px;
+  }
+  .intro .small {
+    width: 100%;
+  }
+  .landing-page .right {
+    margin-top: 5rem;
   }
   .btn-container {
+    margin-top: 2rem;
     width: fit-content;
     margin: auto;
-    margin-top: 3rem;
   }
   .save {
     font-size: 1.1rem;
-    margin: 3rem 0 0 1rem;
+    margin: 3rem 0 0 2rem;
   }
+  .services {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0;
+  }
+
   .card-section {
     flex-flow: column wrap;
     margin-top: 2rem;

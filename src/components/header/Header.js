@@ -7,9 +7,13 @@ import Card from "../card/Card";
 import Modal from "../modal/Modal";
 import supabase from "../../config/supabase";
 import CircularProgress from "@mui/material/CircularProgress";
-import OfflineBoltTwoToneIcon from '@mui/icons-material/OfflineBoltTwoTone';
-import MenuBookTwoToneIcon from '@mui/icons-material/MenuBookTwoTone';
-import Diversity1TwoToneIcon from '@mui/icons-material/Diversity1TwoTone';
+import OfflineBoltTwoToneIcon from "@mui/icons-material/OfflineBoltTwoTone";
+import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
+import Diversity1TwoToneIcon from "@mui/icons-material/Diversity1TwoTone";
+import DataSaverOnTwoToneIcon from "@mui/icons-material/DataSaverOnTwoTone";
+import VolunteerActivismTwoToneIcon from "@mui/icons-material/VolunteerActivismTwoTone";
+import TaskAltTwoToneIcon from "@mui/icons-material/TaskAltTwoTone";
+import hero from "../../assets/images/pic2.jpg";
 
 const Header = () => {
   const [loader, setLoader] = useState(false);
@@ -33,7 +37,7 @@ const Header = () => {
 
   useEffect(() => {
     fetch();
-  },[]);
+  }, []);
 
   const patients = () => {
     return patientData.map((e) => {
@@ -53,22 +57,69 @@ const Header = () => {
         </>
       )}
 
-      <header className="landing-page">
-        <div className="blur"></div>
-        <div className="intro">
-          <h1 className="large">
-            Join Millions of Kind-Hearted Individuals to save dying patients.
-          </h1>
-          <h2 className="small">
-            Your little contribution might be all a patient needs to stay alive.
-          </h2>
-        </div>
-        <div className="btn-container">
-          <a href="#save">
-            <Button btnName="Save a life" btnClass="save-btn" />
-          </a>
+      <header>
+        <div className="landing-page">
+          <div className="left">
+            <div className="intro">
+              <h1 className="large">
+                Join Millions of Kind-Hearted Individuals to save dying
+                patients.
+              </h1>
+              <p className="small">
+                Your little contribution might be all a patient needs to stay
+                alive.
+              </p>
+            </div>
+            <div className="btn-container">
+              <a href="#save">
+                <Button btnName="Save a life" btnClass="save-btn" />
+              </a>
+            </div>
+          </div>
+
+          <div className="right">
+            <img src={hero} alt="hero" />
+          </div>
         </div>
       </header>
+
+      <h3 className="save services">Our Services</h3>
+      <div className="donate-boxes">
+        <div className="donate-box how">
+          <div className="box-content">
+            <DataSaverOnTwoToneIcon className="round-icon" />
+            <h3>Choose Patient to Save</h3>
+            <p>
+              As a life-saver, you can select a patient on the platform that you
+              will like to help. On checking the patient you will see important
+              details about the patient.
+            </p>
+          </div>
+        </div>
+        <div className="donate-box how">
+          <div className="box-content">
+            <VolunteerActivismTwoToneIcon className="round-icon" />
+            <h3>Donate to Patient</h3>
+            <p>
+              Now, you've made up your mind, you can go ahead to donate to one
+              or even more patients. While donating you can choose to be
+              anonymous.
+            </p>
+          </div>
+        </div>
+        <div className="donate-box">
+          <div className="box-content">
+            <TaskAltTwoToneIcon className="round-icon" />
+            <h3>Verify</h3>
+            <p>
+              GOSAVEME is known to be very transparent, so after donating you
+              can check on the contributors feature in the patients page to see
+              all contributors.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <SearchBar />
       <h3 className="save" id="save">
         Save a life today
@@ -80,17 +131,18 @@ const Header = () => {
         <Link to="/patients">View More</Link>
       </div>
 
-
-
       {/* WHY GO SAVE ME */}
-      <h1 className="why-gsm" style={{ textAlign: "center" }}>Why People Use GoSaveMe</h1>
+      <h1 className="why-gsm" style={{ textAlign: "center" }}>
+        Why People Use GoSaveMe
+      </h1>
       <div className="donate-boxes">
         <div className="donate-box how-box">
           <div className="box-content">
             <OfflineBoltTwoToneIcon className="round-icon" />
             <h3>Easy and Fast</h3>
             <p>
-              Creating a campaign and donating funds are done seamlessly on GOSAVEME.
+              Creating a campaign and donating funds are done seamlessly on
+              GOSAVEME.
             </p>
           </div>
         </div>
@@ -115,8 +167,6 @@ const Header = () => {
       </div>
 
       {modal && <Modal setModal={setModal} />}
-
-      
     </>
   );
 };
