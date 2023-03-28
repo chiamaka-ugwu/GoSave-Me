@@ -89,7 +89,7 @@ header {
 
 @media screen and (max-width: 1000px) {
   .landing-page {
-    height: 100vh;
+    height: 90vh;
     flex-direction: column;
     padding: 0;
     align-items: center;
