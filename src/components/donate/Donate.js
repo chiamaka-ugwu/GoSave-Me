@@ -85,7 +85,7 @@ const Donate = () => {
           <div className="box-content">
             <MedicalInformationTwoToneIcon className="round-icon" />
             <h3>Support Medical Research</h3>
-            <p>
+            <p> 
               We are partnering with medical institutions and teaching hospitals
               to support them with funds to carry out medical researches.
             </p>
@@ -103,12 +103,12 @@ const Donate = () => {
       </div>
 
       {/* FAQ SECTION */}
-      <h3 style={{ textAlign: "center" }}>FAQ</h3>
+      <h3 style={{ textAlign: "center", marginTop: "3rem" }}>FAQs</h3>
+      <h4 style={{ textAlign: "center" }}>Frequently Asked Questions</h4>
       <div className="how-it-works faq donate-faq">
         <div className="left">
           <Accordion
             style={{
-              background: "#B293B6",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -121,7 +121,14 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Why should I donate to GOSAVEME?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                Why should I donate to GOSAVEME?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -133,7 +140,6 @@ const Donate = () => {
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -146,7 +152,14 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>How much can I donate?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                How much can I donate?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -157,7 +170,6 @@ const Donate = () => {
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -170,7 +182,14 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Can a donor join in the patient outreach?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                Can a donor join in the patient outreach?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -183,7 +202,6 @@ const Donate = () => {
         <div className="right">
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -196,7 +214,14 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>What are the donations used for?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                What are the donations used for?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -208,7 +233,6 @@ const Donate = () => {
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -221,7 +245,14 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Can I donate to more than one cause?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                Can I donate to more than one cause?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -233,7 +264,6 @@ const Donate = () => {
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -246,7 +276,12 @@ const Donate = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
                 How do I verify that my donation went through?
               </Typography>
             </AccordionSummary>

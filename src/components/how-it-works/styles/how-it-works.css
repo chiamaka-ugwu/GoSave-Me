@@ -57,7 +57,8 @@
 }
 .faq-box{
     margin-bottom: 1.5rem;
-    background: #B293B6 !important;
+    border: 2px solid #66276D;
+    /* background: #FCDEBD !important; */
     border-radius: 10px;
     cursor: pointer;
 }

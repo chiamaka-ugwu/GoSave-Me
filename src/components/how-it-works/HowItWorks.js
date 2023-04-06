@@ -115,12 +115,12 @@ const HowItWorks = () => {
       </div>
 
       {/* FAQ SECTION */}
-      <h3 style={{ textAlign: "center" }}>FAQ</h3>
+      <h3 style={{ textAlign: "center" }}>FAQs</h3>
+      <h4 style={{ textAlign: "center" }}>Frequently Asked Questions</h4>
       <div className="how-it-works faq">
         <div className="left">
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -133,7 +133,14 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>What is GOSAVEME?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                What is GOSAVEME?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -147,7 +154,6 @@ const HowItWorks = () => {
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -160,7 +166,14 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Who can create a GOSAVEME campaign?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                Who can create a GOSAVEME campaign?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -172,7 +185,6 @@ const HowItWorks = () => {
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -185,7 +197,14 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>How much can be raised on GOSAVEME?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                How much can be raised on GOSAVEME?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -199,7 +218,6 @@ const HowItWorks = () => {
         <div className="right">
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -212,7 +230,14 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>How do we get the money that is raised?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                How do we get the money that is raised?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -224,7 +249,6 @@ const HowItWorks = () => {
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -237,19 +261,25 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Can I donate to more than one patient?</Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
+                Can I donate to more than one patient?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Yes please, you can. On GOSAVEME, kindness has no boundaries.
-                You can donate to save as many lives as possible. Thanks for
-                being so kind.
+                Of course, you can. On GOSAVEME, kindness has no boundaries. You
+                can donate to save as many lives as possible. Thanks for being
+                so kind.
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
             style={{
-              background: "#DFF4D7",
               borderRadius: "10px",
               fontSize: "14px",
             }}
@@ -262,7 +292,12 @@ const HowItWorks = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>
+              <Typography
+                style={{
+                  color: "#F79B39",
+                  fontWeight: "600",
+                }}
+              >
                 How do I verify that my donation went through?
               </Typography>
             </AccordionSummary>
