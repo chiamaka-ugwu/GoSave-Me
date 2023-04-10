@@ -6,7 +6,8 @@
     z-index: 1000;
     transition: 0.5s ease-in-out;
     /* background: rgb(178, 147, 182); */
-    background: #FCDEBD;
+    /* background: #FCDEBD; */
+    background-color: #fff;
 }
 .nav2{
     background-color: #fff;

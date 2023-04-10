@@ -59,31 +59,24 @@ const Header = () => {
 
       <header>
         <div className="landing-page">
-          <div className="left">
-            <div className="intro">
-              <h1 className="large">
-                Join Millions of Kind-Hearted Individuals to save dying
-                patients.
-              </h1>
-              <p className="small">
-                Your little contribution might be all a patient needs to stay
-                alive.
-              </p>
-            </div>
-            <div className="btn-container">
-              <a href="#save">
-                <Button btnName="Save a life" btnClass="save-btn" />
-              </a>
-            </div>
+          <div className="intro">
+            <h1 className="large">
+              Join Millions of Kind-Hearted Individuals to save dying patients.
+            </h1>
+            <p className="small">
+              Your little contribution might be all a patient needs to stay
+              alive.
+            </p>
           </div>
-
-          <div className="right">
-            <img src={hero} alt="hero" />
+          <div className="btn-container">
+            <a href="#save">
+              <Button btnName="Save a life" btnClass="save-btn" />
+            </a>
           </div>
         </div>
       </header>
 
-      <h3 className="save services">Our Services</h3>
+      {/* <h3 className="save services">Our Services</h3>
       <div className="donate-boxes">
         <div className="donate-box how">
           <div className="box-content">
@@ -118,7 +111,7 @@ const Header = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <SearchBar />
       <h3 className="save" id="save">
