@@ -2,6 +2,12 @@ import React from "react";
 import "./styles/about-us.css";
 import logo from "../../assets/images/logo.png";
 import image from "../../assets/images/about.png";
+import amaka from '../../assets/images/amaka.jpg';
+import lolia from '../../assets/images/lolia.jpeg';
+import anthony from '../../assets/images/anthony.jpeg';
+import grace from '../../assets/images/grace.jpeg';
+import aku from '../../assets/images/aku.jpeg';
+
 
 const AboutUs = () => {
   return (
@@ -42,29 +48,29 @@ const AboutUs = () => {
         <h3>Meet the Team</h3>
         <div className="meet-team">
           <div className="team">
-            <img src={logo} alt="team" />
-            <h4>Full name of person</h4>
-            <p>Position</p>
+            <img src={amaka} alt="team" width="160" height='180' />
+            <h4>Chiamaka Ugwu</h4>
+            <p>Team Lead</p>
           </div>
           <div className="team">
-            <img src={logo} alt="team" />
-            <h4>Full name of person</h4>
-            <p>Position</p>
+            <img src={lolia} alt="team" width="160" height='180' />
+            <h4>Lolia Nnodim</h4>
+            <p>Product</p>
           </div>
           <div className="team">
-            <img src={logo} alt="team" />
-            <h4>Full name of person</h4>
-            <p>Position</p>
+            <img src={anthony} alt="team" width="160" height='180' />
+            <h4>Anthony Oyovwikefe</h4>
+            <p>Operations</p>
           </div>
           <div className="team">
-            <img src={logo} alt="team" />
-            <h4>Full name of person</h4>
-            <p>Position</p>
+            <img src={grace} alt="team" width="160" height='180' />
+            <h4>Grace Okoroafor</h4>
+            <p>Partnerships and Strategies</p>
           </div>
           <div className="team">
-            <img src={logo} alt="team" />
-            <h4>Full name of person</h4>
-            <p>Position</p>
+            <img src={aku} alt="team" width="160" height='180' />
+            <h4>Akunnaya Stewart</h4>
+            <p>Campaigns</p>
           </div>
         </div>
       </div>
