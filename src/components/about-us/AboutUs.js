@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles/about-us.css";
-import logo from "../../assets/images/logo.png";
+// import logo from "../../assets/images/logo.png";
 import image from "../../assets/images/about.png";
 import amaka from '../../assets/images/amaka.jpg';
-import lolia from '../../assets/images/lolia.jpeg';
-import anthony from '../../assets/images/anthony.jpeg';
+// import lolia from '../../assets/images/lolia.jpeg';
+// import anthony from '../../assets/images/anthony.jpeg';
 import grace from '../../assets/images/grace.jpeg';
 import aku from '../../assets/images/aku.jpeg';
 
@@ -52,16 +52,16 @@ const AboutUs = () => {
             <h4>Chiamaka Ugwu</h4>
             <p>Team Lead</p>
           </div>
-          <div className="team">
+          {/* <div className="team">
             <img src={lolia} alt="team" width="160" height='180' />
             <h4>Lolia Nnodim</h4>
             <p>Product</p>
-          </div>
-          <div className="team">
+          </div> */}
+          {/* <div className="team">
             <img src={anthony} alt="team" width="160" height='180' />
             <h4>Anthony Oyovwikefe</h4>
             <p>Operations</p>
-          </div>
+          </div> */}
           <div className="team">
             <img src={grace} alt="team" width="160" height='180' />
             <h4>Grace Okoroafor</h4>
