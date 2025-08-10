@@ -69,14 +69,14 @@ const Cards = ({ className, data, edit, supabase, setloader, loader }) => {
       >
         <div className="card-content">
           <div className="img-container">
-            <Link to={`/patient-details/${data.id}`}>
+            {/* <Link to={`/patient-details/${data.id}`}> */}
               <CardMedia
                 component="img"
                 height="180"
                 image={baseURL + data.patientData.images[0]}
                 alt="patient"
               />
-            </Link>
+            {/* </Link> */}
           </div>
           <div
             className="target-container"

@@ -120,9 +120,9 @@ const Header = () => {
       <section className="section">
         <div className="card-section">{patientData && patients()}</div>
       </section>
-      <div className="view-more">
+      {/* <div className="view-more">
         <Link to="/patients">View More</Link>
-      </div>
+      </div> */}
 
       {/* WHY GO SAVE ME */}
       <h1 className="why-gsm" style={{ textAlign: "center" }}>
